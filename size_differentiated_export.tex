@@ -8,23 +8,26 @@
 %\usepackage{amsmath}
 %\usepackage{appendix}
 %\usepackage[left=3cm,right=3cm]{geometry}
-
-% Apply watermark to document
+  % Apply watermark to document
 %\usepackage{draftwatermark}
 %\SetWatermarkLightness{0.9}
-%\SetWatermarkScale{5}
+%\SetWatermarkScale{15}
 %\SetWatermarkText{DRAFT}
+
+
 
 \documentclass[draft,linenumbers]{agujournal2018}
 \usepackage{apacite}
 \usepackage{url} %this package should fix any errors with URLs in refs.
   
+
+
 % FIXME command
 \newcommand{\fixme}[1]{\color{red}$<$\textbf{FIX ME: #1}$>$\color{black}}
 
 
 % Trackchanges package
-\usepackage{trackchanges}
+%\usepackage{trackchanges}
 %% PLEASE USE THE FOLLOWING COMMANDS
 %   \note[editor]{The note} 
 %   \annote[editor]{Text to annotate}{The note} 
@@ -32,7 +35,7 @@
 %   \remove[editor]{Text to remove} 
 %   \change[editor]{Text to remove}{Text to add}
 
-\draftfalse
+%\draftfalse
 
 \journalname{Global Biochemical Cycles}
 
@@ -50,7 +53,7 @@
 %  AUTHORS AND AFFILIATIONS
 %
 %% ------------------------------------------------------------------------ %%
-\author{M. Dever\affil{1}, D. Nicholson\affil{1}, M. Omand\affil{2}, and A. Mahadevan\affil{1}}
+\authors{M. Dever\affil{1}, D. Nicholson\affil{1}, M. Omand\affil{2}, and A. Mahadevan\affil{1}}
 \affiliation{1}{Woods Hole Oceanographic Institution, Woods Hole, MA 02543, USA}
 \affiliation{2}{Graduate School of Oceanography, University of Rhode Island, Narragansett, Rhode Island, USA}
 
@@ -61,11 +64,11 @@
 %
 %% ------------------------------------------------------------------------ %%
 
-\begin{keypoints}
-\item = enter point 1 here =
-\item = enter point 2 here =
-\item = enter point 3 here =
-\end{keypoints}
+%\begin{keypoints}
+%\item = enter point 1 here =
+%\item = enter point 2 here =
+%\item = enter point 3 here =
+%\end{keypoints}
 
 %% ------------------------------------------------------------------------ %%
 %
@@ -350,18 +353,18 @@ The impact of ocean dynamics on the respective contributions of the different si
 
 \subsection{Physical model}
 \label{sec: Discussion_model}
-\textit{Papa\_summer} and \textit{Papa\_winter} experiments were designed to statistically capture the ocean dynamics at Station Papa (145$^o$W, 50$^o$N) in the northeast Pacific Ocean. After spin-up, the model demonstrated similar distribution of both horizontal ($M^2$) and vertical ($N^2$) density gradients than observed using underwater gliders (see Figures \ref{fig: Papa_summer}, \ref{fig: Papa_winter}, and \ref{fig: dynamics}). The two experiments, however, show drastically different distributions of $M^2$, where the winter distribution has a much longer tail, suggesting sharper density gradients. The tail of the wintertime distribution is only partially captured by the glider data, due to the fact that underwater gliders sample gradients at a maximum resolution of about 10 km, while the model resolution is 500 m and therefore allows sharp submesoscale fronts and filaments to be captured in the distribution.
+\textit{Papa\_summer} and \textit{Papa\_winter} experiments were designed to statistically capture the ocean dynamics at Station Papa (145$^o$W, 50$^o$N) in the northeast Pacific Ocean. After spin-up, the model demonstrated similar distribution of both horizontal ($M^2$) and vertical ($N^2$) density gradients than observed using underwater gliders (see Figures \ref{fig: Papa_summer}, \ref{fig: Papa_winter}, and \ref{fig: dynamics}). The two experiments, however, show significantly different distributions of $M^2$, where the winter distribution has a longer tail, suggesting sharper density gradients. The tail of the wintertime distribution is only partially captured by the glider data, due to the fact that underwater gliders sample gradients at a maximum resolution of about 10 km, while the model resolution is 500 m and therefore allows sharp submesoscale fronts and filaments to be captured in the distribution.
 
 Studies investigating submesoscale dynamics traditionally focused on regions where the presence of submesoscale fronts and filaments are established, such as western boundary currents with strong gradients \citep{Dasaro_2011, Thomas_2013}, or at the edge of mesoscale features \citep{vanHaren_2006,Waite_2016}. The seasonality in submesoscale dynamics captured in the glider dataset at Station Papa, and reflected in the model experiments, echoes findings of recent observational studies conducted at a similar latitude in the Atlantic Ocean demonstrating the intensification of submesoscale dynamics in the wintertime \citep{Thompson_2016, Buckingham_2016}. Despite being sometimes qualified as an "eddy desert" with low kinetic energy \citep{Chelton_2011}, wintertime ocean characteristics in the eastern part of the Pacific subpolar gyre suggest the presence of submesoscale features: strong density gradients, localized Rossby numbers of the order 1 and larger, a balanced Richardson number $Ri_b = \frac{f^2N^2}{M^4}$ smaller than 1, a positively skewed distribution in vorticity, and a negatively skewed distribution of vertical velocities \citep[see Figure \ref{fig: dynamics};][]{Thomas_2008,Rudnick_2001, Buckingham_2016}.
 
 Strong downward velocities are hypothesized to enhance POC export by advecting slower-sinking particles out of the mixed layer. \textit{Papa\_winter} indeed exhibits vertical velocities more than 20 times larger than in \textit{Papa\_summer}. The vertical currents in \textit{Papa\_winter}, however, tend to be much patchier than the weaker vertical currents observed in \textit{Papa\_summer}. Because both particle production and downward vertical velocities present a high degree of patchiness, it requires a certain level of covariance between the two fields for the export to effectively be enhanced \citep{Mahadevan_2012}. A more realistic seeding strategy for Lagrangian particles, such as one guided by biological tracers, would likely provide important information towards a better understanding of the effects of patchiness on POC export at submeso-scales
 
-The hypothesis tested in this study is that submesoscale activity enhances export of particulate matter at Station Papa. The wintertime intensification in submesoscale activity has the potential to indeed enhance export (see discussion below). However, the seasonal cycle in submesoscale activity is out-of-phase with the one in net community productivity, which peaks in the spring and summertime when the mixed layer is shallower \citep{Plant_2016}. Two mechanisms are therefore present to potentially sustain a year-long POC export: In the winter, less particulate material is present in the mixed layer, but active submesoscale dynamics tend to enhance the POC export by advecting the more numerous slower-sinking particles into the ocean interior. In the summer, the production of POC is much larger, but export tends to be dominated by gravitational sinking, which discriminate against slower-sinking particles.
+The hypothesis tested in this study is that submesoscale activity enhances export of particulate matter at Station Papa. The wintertime intensification in submesoscale activity has the potential to indeed enhance export (see discussion below). However, the seasonal cycle in submesoscale activity is out of phase with the one in net community productivity, which peaks in the spring and summertime when the mixed layer is shallower \citep{Plant_2016}. Two mechanisms are therefore present to potentially sustain a year-long POC export: In the winter, less particulate material is present in the mixed layer, but active submesoscale dynamics tend to enhance the POC export by advecting the more numerous slower-sinking particles into the ocean interior. In the summer, the production of POC is much larger, but export tends to be dominated by gravitational sinking, which discriminate against slower-sinking particles.
 
 \subsection{Particle export}
 \label{sec: discussion_particle}
 
-The analysis of the particle tracking experiments reveals that the role played by slower-sinking particles in POC export depends on two main characteristics: (1) the dynamics of the ocean flow field, and (2) the slope of the size spectrum (i.e., the Junge slope coefficient $\xi$).
+Analyses of particle tracking experiments reveal that the role played by slower\-sinking particles in POC export depends on two main characteristics: (1) the dynamics of the ocean flow field, and (2) the slope of the size spectrum (i.e., the Junge slope coefficient $\xi$).
 
 Mixed layer ocean dynamics at station Papa change significantly between the winter and the summer. In the winter, submesoscale dynamics are intensified and sharp fronts and filaments develop in the mixed layer. This change in dynamics has a clear impact on the amount of particles exported for all sinking-velocity classes modeled in this experiment. First, particles in all sinking-velocity class generally reach the export depth faster. This is the most significant result, as export from any sinking-velocity class is characterized by two competing timescales: its export timescales (i.e., the time it takes for a particle to reach the export depth), and its remineralization timescales. The former evidently needs to be shorter than the latter to efficiently export POC. Second, particles are exported more gradually. While particles in a sinking-velocity class reach the export depth over shorter timescale, it takes longer to export the same number of particles as in the summer. This is due to the upward vertical current, re-suspending material that would otherwise sink, and thus delaying its export. Keeping in mind the competing timescales mentioned above, it leads to interesting questions: Is it more efficient to export more faster-sinking particles--less numerous but containing more biomass--and no slower-sinking particles, like in \textit{Papa\_summer}? Or is export greater when less faster-sinking particles are exported, but more slower-sinking particles, much more numerous, also contribute to the export, like in \textit{Papa\_winter}?
 
@@ -369,7 +372,7 @@ Mixed layer ocean dynamics at station Papa change significantly between the wint
 %% This section answers the questions above in terms of total amount of biomass efficiently exported with and without remineralization 
 In the absence of remineralization, the net effect of submesoscale dynamics on biomass export depends on the Junge slope coefficient. Over the course of our simulation, the total amount of biomass exported is consistently enhanced when $\xi = 4$ (10 to 60\% increase) in the presence of submesoscale dynamics. For a flat biomass spectrum ($\xi = 3$), the export enhancement due to submesoscale dynamics is always smaller than 20\%. When $\xi =2$, the amount of biomass exported in the presence of submesoscale dynamics varies between 95 and 110\% of the export observed in the summer, when submesoscale dynamics are not active. Therefore, to address the questions formulated above, export is only enhanced in the presence of submesoscale dynamics if the slope of the size spectrum is steep enough to compensate for the re-suspension of faster-sinking particles by upwards vertical currents at submesoscales. %Talk about the asymmetry in the vertical velocity PDF (see Figure \ref{fig: dynamics})? Showing stronger, more localized downwelling, and broader and weaker upwelling? 
 
-Introducing remineralization processes significantly decreases the total amount of biomass exported. Counter-intuitively, however, remineralization processes further strengthen the impact of submesoscale dynamics on export. The increase in exported biomass when comparing summer and winter time is larger when remineralization processes are included, and also increase with larger $\xi$. Total exported biomass almost doubles when $\xi =4$, and increases by 5 to 20\% for $\xi =2$ and $\xi = 3$, respectively. This can be explained by the fact that remineralization processes have a greater impact on sinking-velocity classes that rely on gravitational sinking to be exported, as remineralization tends to slow these particles down and thus prolongs their export timescales. In the summer, almost the entirety of the sinking velocity spectrum is therefore affected as all classes rely on gravitational sinking for export. In the winter, however, slower-sinking particles are exported through advective processes. Their export timescale is little affected by remineralization processes as it only depend on local ocean dynamics, leading to a greater net export then when remineralization is not considered.
+Introducing remineralization processes significantly decreases the total amount of biomass exported. Counter-intuitively, however, remineralization processes further strengthen the impact of submesoscale dynamics on export. The increase in exported biomass when comparing summertime and wintertime is larger when remineralization processes are included, and also increase with larger $\xi$. Total exported biomass almost doubles when $\xi =4$, and increases by 5 and 20\% for $\xi =2$ and $\xi = 3$, respectively. This can be explained by the fact that remineralization processes have a greater impact on sinking-velocity classes that rely on gravitational sinking to be exported, as remineralization tends to slow these particles down and thus prolongs their export timescales. In the summer, almost the entirety of the sinking velocity spectrum is therefore affected as all classes rely on gravitational sinking for export. In the winter, however, slower-sinking particles are exported through advective processes. Their export timescale is little affected by remineralization processes as it only depends on local ocean dynamics, leading to a greater net export than when remineralization is not considered.
 
 %% this part discusses the respective contributions of the different sinking-velocity classes
 The contribution of a particle class to POC export generally increases with the sinking-velocity. That is, faster-sinking particles tend to dominate the export signal and the curve of exported biomass versus sinking-velocity has a positive slope. To have a greater contribution of a slower-sinking velocity class, the following condition must be satisfied:
@@ -380,32 +383,32 @@ The contribution of a particle class to POC export generally increases with the 
 \end{equation}
 where $N$ is the number of simulated particles exported, $w_s$ is the sinking velocity and $\xi$ is the Junge slope coefficient (see Equation \ref{eq: powerlaw_radius}).
 
-In a gravitationally-driven system (i.e., weak submesoscale activity), this can only be achieved by having  $N_{slow} \sim N_{fast}$ and $\xi>3$, as there are no mechanism capable of selectively exporting slower-sinking particles (i.e., $N_{slow} \leq N_{fast}$). Junge slope greater than 3 are regularly observed in the ocean \citep{Kostadinov_2009, White_2015}. Our results suggest that, in these conditions, the export of biomass is dominated by an intermediate sinking-velocity class that sinks fast enough to be 100\% exported ($N_{slow} = N_{fast}$). Because of the negative slope in the biomass spectrum, any particle class sinking at a faster rate will not contribute as much to the biomass export. The intermediate class responsible for the largest part of the export signal will vary with time and space as it depends on the parameter $\xi$, as well as on the export depth. As $\xi$ increases, the sinking-velocity of the dominant class decreases (see Equation \ref{eq: condition}). A deeper export depth would have the opposite effect and increase sinking-velocity of the dominant class (Figure \ref{fig: export_cartoon}). Implementing remineralization processes only shifts the curve shown in Figure \ref{fig: export_cartoon} towards faster-sinking classes: as particle remineralize, a larger portion of the sinking-velocity spectrum will not contribute to POC export, and a faster initial sinking-velocity is required for the export timescale to be shorter than the remineralization timescale.
+In a gravitationally-driven system (i.e., weak submesoscale activity), this can only be achieved by having  $N_{slow} \sim N_{fast}$ and $\xi>3$, as there are no mechanism capable of selectively exporting slower-sinking particles (i.e., $N_{slow} \leq N_{fast}$). Junge slopes greater than 3 are regularly observed in the ocean \citep{Kostadinov_2009, White_2015}. Our results suggest that, in these conditions, the export of biomass is dominated by an intermediate sinking-velocity class that sinks fast enough to be 100\% exported ($N_{slow} = N_{fast}$; see Figure \ref{fig: export_cartoon}). Because of the negative slope in the biomass spectrum, any particle class sinking at a faster rate will not contribute as much to the biomass export. The intermediate class responsible for the largest part of the export signal will vary with time and space as it depends on the parameter $\xi$, as well as on the export depth. As $\xi$ increases, the sinking-velocity of the dominant class decreases (see Equation \ref{eq: condition}). A deeper export depth would have the opposite effect and increase sinking-velocity of the dominant class (Figure \ref{fig: export_cartoon}). Implementing remineralization processes only shifts the curve shown in Figure \ref{fig: export_cartoon} towards faster-sinking classes: as particle remineralize, a larger portion of the sinking-velocity spectrum will not contribute to POC export, and a faster initial sinking-velocity is required for the export timescale to be shorter than the remineralization timescale.
 
 %FIG8
  \begin{figure}[ht!]
 	\centering
-	\includegraphics[width = .6\linewidth]{figures/cartoon_meso}\\[.2cm]
-	\includegraphics[width = .6\linewidth]{figures/cartoon_submeso}
-	\caption{}
+	\includegraphics[width = .65\linewidth]{figures/cartoon_meso}\\[.2cm]
+	\includegraphics[width = .65\linewidth]{figures/cartoon_submeso}
+	\caption{Schematics showing the respective contribution to export of particles with different sinking velocities in (top) a gravitationally-driven system (i.e., weak submesoscale dynamics), and (bottom) an advectively-driven system (i.e., strong submesoscale dynamics).}
 	\label{fig: export_cartoon}
 \end{figure}
 
-In a system affected by submesoscale dynamics, localized strong downwelling vertical currents are generated. This effectively shortens the export timescale of slower-sinking particles, entering a regime where export timescales are shorter than remineralization timescales (Figure \ref{fig: export_cartoon}). In this regime, slower-sinking particles significantly contribute to POC export. In this study, sinking-velocity classes that did not contributes to POC export in a mesoscale regime, are found to contribute up to 30\% of POC export in the most extreme case, where $\xi =4$. Implementing remineralization process has little to no impact on the respective contributions of the different sinking-velocity classes as the impact of remineralization is smaller in advectively-driven export mechanism, as opposed to gravitationally-driven.
+In a system affected by submesoscale dynamics, localized strong downwelling vertical currents are generated. This effectively shortens the export timescale of slower-sinking particles, entering a regime where export timescales are shorter than remineralization timescales (Figure \ref{fig: export_cartoon}). In this regime, slower-sinking particles significantly contribute to POC export. In this study, sinking-velocity classes that did not contribute to POC export in a mesoscale regime, are found to contribute up to 30\% of POC export in the most extreme case, where $\xi =4$. Implementing remineralization process has little to no impact on the respective contributions of the different sinking-velocity classes as the impact of remineralization is smaller in advectively-driven export mechanism, as opposed to gravitationally-driven.
 
 \section{Conclusion}
 \label{sec: Conclusions}
 The main conclusions of this study are: 
 \begin{enumerate}
-\item Submesoscale activity at station Papa is enhanced in the wintertime, leading to larger vertical velocities than in the summer. Export processes in the winter are thus driven by advective sinking, as opposed to gravitational sinking in the summertime.
+\item Submesoscale activity at station Papa is enhanced in the wintertime, leading to larger vertical velocities than in the summertime. The export mechanism in the winter is thus driven by advective sinking, as opposed to gravitational sinking in the summertime.
 \item Submesoscale dynamics generally enhance export by increasing the contribution of slower-sinking particles to POC export by increasing the number of particle exported through advective sinking. The contribution of slower-sinking particles in ageostrophic flows is at least significant, and can be dominant in specific conditions.
-\item Contribution of slower-sinking particles to POC export also depends on the slope of the particle size spectra (i.e., Junge Slope), that controls the relative number of particles per size class. Three cases emerge in this study:
+\item Contribution of slower-sinking particles to POC export depends on the slope of the particle size spectra (i.e., Junge Slope), that controls the relative number of particles per size class. Three cases emerge in this study:
 \begin{enumerate}
-	\item If the Junge slope is smaller than 3, larger particles contribute most to export independently of flow dynamics, as even exporting 100\% of the particles in all sinking velocity classes would see larger particles dominate. 
+	\item If the Junge slope is smaller than 3, larger particles contribute most to export independently of flow dynamics, as there are no mechanism capable of selectively exporting slower-sinking particles.
 	\item If the Junge slope equals 3, the respective contributions of the different size classes depend on the dynamical characteristics of the flow, as it influences the number of particles being exported. If 100\% of the particles is exported in all sinking classes, then each class contributes equally to POC export.
 	\item If the Junge slope is greater than 3, ocean dynamics become the determining factor on which classes dominate: in a mostly geostrophic flow with weak vertical velocities, an intermediate sinking-velocity class will dominate POC export. In a flow with ageostrophic circulation leading to larger vertical velocities, slower sinking classes can potentially dominate export.
 	\end{enumerate}
-\item Remineralization processes reduces the contribution of slower-sinking particles when export dynamics are dominated by gravitational sinking (i.e., in a geostrophic flow). As flow dynamics become ageostrophic, advective sinking leads the export and remineralization processes have a limited impact.
+\item Remineralization processes reduce the contribution of slower-sinking particles when export dynamics are dominated by gravitational sinking (i.e., in a geostrophic flow). As flow dynamics become ageostrophic, advective sinking leads the export and remineralization processes have a limited impact.
 %\item[(5)] Under specific conditions (large Junge slope and strongly ageostrophic flow), remineralization processes counter-intuitively enhance the role of slower-sinking (and non-sinking) particles to the point where export is dominated by these slow-sinking particles, therefore challenging the traditional paradigm of carbon export.
 \end{enumerate}
 
