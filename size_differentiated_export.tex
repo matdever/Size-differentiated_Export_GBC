@@ -124,10 +124,10 @@ Two main experiments are conducted using the same configuration of PSOM, where o
 
 \subsubsection{\textit{Papa\_summer} Model Experiment}
 
-In \textit{Papa\_summer}, PSOM is initialized based on climatological ARGO data in April. The magnitude of the density gradient across the front (i.e., frontal sharpness) is set to 3.34$\times$10$^{-6}$ kg/m$^3$/m, which corresponds to the 95$^{th}$ percentile of the PDF of density gradients measured in April from glider data collected in the region (Figure \ref{fig: Papa_summer} and Table \ref{tab: meso_vs_submeso}). The model is run with a timestep of 216 s and is allowed to spin-up for 60 days, allowing summer stratification to develop. The model is then run for 30 additional days, saving instantaneous model fields every 3 hours for particle tracking. The month of April is chosen for initialization so the experiment would capture the onset of positive net heat fluxes, and the summer restratification that ensues in July-August (Figure \ref{fig: Papa_summer}). In this region, the summer stratification is associated with large primary productivity and therefore large particle production and potentially export \citep[e.g., fecal pallets, dead phytoplankter; ][]{Plant_2016}.
+In \textit{Papa\_summer}, PSOM is initialized based on climatological ARGO data in April. The magnitude of the density gradient across the front (i.e., frontal sharpness) is set to 3.34$\times$10$^{-6}$ kg/m$^3$/m, which corresponds to the 95$^{th}$ percentile of the PDF of density gradients measured in April from glider data collected in the region (Figure \ref{fig: Papa_summer} and Table \ref{tab: meso_vs_submeso}). The model is run with a timestep of 216 s and is allowed to spin-up for 60 days, allowing summer stratification to develop. The model is then run for 30 additional days, saving instantaneous model fields every 3 hours for particle tracking. The month of April is chosen for initialization so the experiment would capture the onset of positive net heat fluxes, and the summer restratification that ensues in July-August (Figure \ref{fig: Papa_summer}). In this region, the summer stratification is associated with large primary productivity, particle production, and POC export \citep[e.g., fecal pallets, dead phytoplankter; ][]{Plant_2016}.
 
 %TAB1
-\begin{table}[ht]
+\begin{table}[t]
 \caption{Summary of the key characteristics of PSOM experiments \textit{Papa\_summer} and \textit{Papa\_winter}.}
 	\label{tab: meso_vs_submeso}
 	\centering
@@ -136,12 +136,16 @@ In \textit{Papa\_summer}, PSOM is initialized based on climatological ARGO data 
 		\hline
 											& \textit{Papa\_summer} & \textit{Papa\_winter} \\
 		\hline
-		Period 								& April -- July         & January -- March      \\
-		Spin-up								& 60 days               & 50 days               \\
-		Advective timestep				    & 216 s                 & 108 s                 \\
-		Horizontal diffusivity			    & 1 m$^2$/s             & 0.2 m$^2$/s           \\
-		Restoration timescale			    & 3 days                & 15 days               \\
-		Maximum M$^2$ ($\times$10$^{-8}$)	& 3.20 s$^{-2}$         & 33.9 s$^{-2}$         \\	
+		Time period 								& April -- July             & January -- March          \\
+		Spin-up								& 60 days                   & 50 days                   \\
+		Advective timestep				    & 216 s                     & 108 s                     \\
+		Horizontal diffusivity			    & 1 m$^2$/s                 & 0.2 m$^2$ s$^{-1}$        \\
+		Restoration timescale			    & 3 days                    & 15 days                   \\
+		Maximum M$^2$ ($\times$10$^{-8}$)	& 3.20 s$^{-2}$             & 33.9 s$^{-2}$             \\	
+		Maximum N$^2$ ($\times$10$^{-4}$)	& 1.5 s$^{-2}$              & 1.6 s$^{-2}$              \\
+		Initial mixed layer depth           & 73 m                      & 85 m                      \\
+		Zonal wind stress                	& 0 -- 0.16 N m$^{-2}$      & -0.05 -- 0.17 N m$^{-2}$  \\	
+		Surface heat flux               	& -46.8 -- 167.5 W m$^{-2}$ & -57.6 -- 15.3 W m$^{-2}$  \\	
 		\hline
 	\end{tabular}
 \end{table}
@@ -168,7 +172,7 @@ In \textit{Papa\_summer}, PSOM is initialized based on climatological ARGO data 
 
 
 % FIG2
-\begin{figure}[ht]
+\begin{figure}[t]
 	\includegraphics[width = 1\linewidth]{figures/Fig2_Papa500_summer}
 	\caption{PSOM configuration for \textit{Papa\_summer}. (a) Time series of net heat fluxes and wind stress prescribed at the surface. Notice the positive heat fluxes, as well as downfront winds (i.e. eastward) persisting throughout the experiment. (b)-(d) horizontal buoyancy gradients $M^2 = |\nabla_Hb|^2$ (in s$^{-2}$) at day of year (doy) 105, 135, and 165. Black contours show isopycnals (in kg/m$^3$; CI = 0.01 kg/m$^3$). (e) Vertical profile of the buoyancy frequency $N^2$ at doy 105, 135, 165, and 195, showing the development of summer stratification centered at z = 30 m (solid lines). Monthly-average vertical stratification obtained from glider profiles collected in June and July are superimposed (dashed lines), along with the correlation coefficient between observations and model outputs.}
 	\label{fig: Papa_summer}
