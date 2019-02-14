@@ -21,30 +21,30 @@ thefolder = pwd;
 fullfigure
 for plt = 1:2
     if plt == 1
-        cd /Volumes/mathieudever/PSOM_backup/Papa500/highrez
+        cd /Volumes/mahadevanlab/mathieudever/PSOM_backup/PSOM_outputs/Papa_summer/highrez
         timesteps = 30500;%[0 24000 30000 36000];
     elseif plt == 2
-        cd /Volumes/mathieudever/PSOM_backup/Papa500_steroid
+        cd /Volumes/mahadevanlab/mathieudever/PSOM_backup/PSOM_outputs/Papa_winter
         timesteps = 44000;%[0 32000 44000 56000];
     end
     counter = 0;
-    for ii = timesteps
+    for tt = timesteps
         counter = counter +1;
         
-        rho = ncread(['full_',num2str(ii,'%05d'),'.cdf'],'rho');
+        rho = ncread(['full_',num2str(tt,'%05d'),'.cdf'],'rho');
         rho(1,:,:) = NaN; rho(end,:,:) = NaN;
-        u = ncread(['full_',num2str(ii,'%05d'),'.cdf'],'u');
+        u = ncread(['full_',num2str(tt,'%05d'),'.cdf'],'u');
         u(1,:,:) = NaN; u(end,:,:) = NaN;
-        v = ncread(['full_',num2str(ii,'%05d'),'.cdf'],'v');
+        v = ncread(['full_',num2str(tt,'%05d'),'.cdf'],'v');
         v(1,:,:) = NaN; v(end,:,:) = NaN;
-        w = ncread(['full_',num2str(ii,'%05d'),'.cdf'],'w');
+        w = ncread(['full_',num2str(tt,'%05d'),'.cdf'],'w');
         w(1,:,:) = NaN; w(end,:,:) = NaN;
         % vor = ncread(['full_',num2str(ii,'%05d'),'.cdf'],'vor');
         % vor(1,:,:) = NaN; vor(end,:,:) = NaN;
         
-        x = ncread(['full_',num2str(ii,'%05d'),'.cdf'],'xc')*1000;
-        y = ncread(['full_',num2str(ii,'%05d'),'.cdf'],'yc')*1000;
-        Z2 = ncread(['full_',num2str(ii,'%05d'),'.cdf'],'zc');
+        x = ncread(['full_',num2str(tt,'%05d'),'.cdf'],'xc')*1000;
+        y = ncread(['full_',num2str(tt,'%05d'),'.cdf'],'yc')*1000;
+        Z2 = ncread(['full_',num2str(tt,'%05d'),'.cdf'],'zc');
         z = squeeze(Z2(1,1,:));
         [X,Y] = meshgrid(x,y);
         [X2,Y2,Z2] = meshgrid(x,y,squeeze(Z2(1,1,:)));
