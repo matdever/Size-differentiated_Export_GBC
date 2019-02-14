@@ -1,6 +1,6 @@
 clear
 % Create a blue-to-red colorbar for line plot
-cmap = jet(16); cmap = [cmap(1,:);cmap(5,:);cmap(11,:);cmap(16,:)];
+cmap = jet(16); cmap = [cmap(1,:);cmap(5,:);cmap(12,:);cmap(16,:)];
 
 %% this code creates the figures that synthetize the forcing and density
 % field for the Papa500 xperiment
@@ -73,6 +73,8 @@ h2 = plot([0:36000]*216/86400,WS(1:36001,1),'--k','linewidth',3);
 ylabel('Zonal Wind Stress [N/m^2]')
 set(gca,'ytick',-0.2:0.1:0.2,'ylim',[-0.2 0.2],'ycolor','k')
 
+line(get(gca,'xlim'),[0 0],'linestyle',':','color','k','linewidth',2)
+
 H = legend([h1 h2],'Surface Heat Flux','Zonal Wind Stress');
 set(H,'location','northwest','fontsize',32)
 
@@ -124,7 +126,7 @@ for ii =  [0 16000 32000 56000]
         hold on
         contour(x/1000,y/1000,rho(:,:,depth_level)',1025:.01:1026,'k');
         set(gca,'clim',CLIM)
-        colorbar; box on
+        box on
         set(gca,'fontsize',30)
         xlabel('x [km]')
         ylabel('y [km]')
@@ -138,9 +140,17 @@ for ii =  [0 16000 32000 56000]
         elseif loop_counter==2
             text(4,195,'(c)','fontsize',30,'fontweight','b','backgroundcolor','w')
             title(['doy ',num2str((ii-8000)/86400*108 + 20)])
+            set(gca,'yticklabels',{})
+            ylabel('')            
         elseif loop_counter==3
             text(4,195,'(d)','fontsize',30,'fontweight','b','backgroundcolor','w')
             title(['doy ',num2str((ii-8000)/86400*108 + 20)])
+            set(gca,'yticklabels',{})
+            ylabel('')
+            colorbar
+            POS = get(gca,'pos');
+            POS (3) = 0.1566;
+            set(gca,'pos',POS); clear POS
         end
     end
     

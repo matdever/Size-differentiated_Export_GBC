@@ -1,7 +1,7 @@
 clear
 
 % Create a blue-to-red colorbar for line plot
-cmap = jet(16); cmap = [cmap(1,:);cmap(5,:);cmap(11,:);cmap(16,:)];
+cmap = jet(16); cmap = [cmap(1,:);cmap(5,:);cmap(12,:);cmap(16,:)];
 
 %% this code creates the figures that synthetize the forcing and density
 % field for the Papa500 xperiment
@@ -14,7 +14,7 @@ clearvars -except glider cmap
 
 %% STEP 1 - Compute the TKE vs time. cannot use the full resolution, as it is domain integrated
 thefolder = pwd;
-cd /Volumes/garuda/Mathieu/output_Papa_Dx=500_from_1km/K1
+cd /Volumes/mahadevanlab/mathieudever/PSOM_backup/PSOM_outputs/Papa_summer/
 % Surface view
 depth = 50; % depth to plot in m
 lat = 50;   % Latitude of mid-domain (for f)
@@ -27,14 +27,14 @@ jfinish = 402;
 %% Step 2 - load the forcing time series
 
 % Heat Fluxes
-fileID = fopen('/Users/mathieudever/Google Drive/Publications/size_differentiated_sinking/figures/code/ini_heatfluxes.in','r');
+fileID = fopen('/Volumes/mahadevanlab/mathieudever/PSOM_backup/PSOM_configuration/Papa_summer/ini_heatfluxes.in','r');
 dataArray = textscan(fileID, '%f%[^\n\r]');
 fclose(fileID);
 HF = dataArray{:, 1};
 clearvars fileID dataArray ans;
 
 % Windstress
-fileID = fopen('/Users/mathieudever/Google Drive/Publications/size_differentiated_sinking/figures/code/ini_windstress.in','r');
+fileID = fopen('/Volumes/mahadevanlab/mathieudever/PSOM_backup/PSOM_configuration/Papa_summer/ini_windstress.in','r');
 dataArray = textscan(fileID, '%f%f%[^\n\r]','delimiter',',');
 fclose(fileID);
 WS = [dataArray{1:end-1}];
@@ -123,7 +123,7 @@ for ii =  [0 12000 24000 36000]
         hold on
         contour(x/1000,y/1000,rho(:,:,depth_level)',1025:.01:1026,'k');
         set(gca,'clim',CLIM)
-        colorbar; box on
+        box on
         set(gca,'fontsize',30)
         xlabel('x [km]')
         ylabel('y [km]')
@@ -135,8 +135,16 @@ for ii =  [0 12000 24000 36000]
             text(4,195,'(b)','fontsize',30,'fontweight','b','backgroundcolor','w')
         elseif loop_counter==2
             text(4,195,'(c)','fontsize',30,'fontweight','b','backgroundcolor','w')
+            set(gca,'yticklabels',{})
+            ylabel('')        
         elseif loop_counter==3
             text(4,195,'(d)','fontsize',30,'fontweight','b','backgroundcolor','w')
+            set(gca,'yticklabels',{})
+            ylabel('')
+            colorbar
+            POS = get(gca,'pos');
+            POS (3) = 0.1566;
+            set(gca,'pos',POS); clear POS
         end
     end
     
