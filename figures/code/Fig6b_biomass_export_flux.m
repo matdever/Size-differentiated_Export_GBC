@@ -269,8 +269,8 @@ for slope = [4 2]
     
     % Annotations
     if counter == 1
-        text(0.03,0.95,'(a)','fontsize',28,'HorizontalAlignment','center','edgecolor','w','Units','normalized')
-        text(0.5,1.25,'Papa\_summer','HorizontalAlignment','center','FontWeight','b','FontSize',30,'Units','normalized')
+        h = text(0.03,0.95,'(a)','fontsize',28,'HorizontalAlignment','center','edgecolor','none','Units','normalized','FontWeight','b','BackgroundColor','none')
+        text(0.5,1.22,'Papa\_summer','HorizontalAlignment','center','FontWeight','b','FontSize',40,'Units','normalized')
     end
     
     % Second legend
@@ -325,8 +325,8 @@ for slope = [4 2]
     
     % Annotations
     if counter == 1
-        text(0.03,0.95,'(b)','fontsize',28,'HorizontalAlignment','center','edgecolor','w','Units','normalized')
-        text(0.5,1.25,'Papa\_winter','HorizontalAlignment','center','FontWeight','b','FontSize',30,'Units','normalized')
+        text(0.03,0.95,'(b)','fontsize',28,'HorizontalAlignment','center','edgecolor','none','Units','normalized','FontWeight','b','BackgroundColor','none')
+        text(0.5,1.22,'Papa\_winter','HorizontalAlignment','center','FontWeight','b','FontSize',40,'Units','normalized')
     end
     
     % Second legend
