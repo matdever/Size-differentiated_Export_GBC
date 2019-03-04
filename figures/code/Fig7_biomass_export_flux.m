@@ -196,7 +196,7 @@ cmap = [0    0.4470    0.7410
 %%
 fullfigure
 counter = 0;
-for slope = [4 2]
+for slope = 4%[4 2]
     
     for ii = 1:length(ws)
         B_meso(:,ii) = flux_meso(:,ii).*B0.*(ws(ii)/ws0)^((3-slope)/2);
@@ -263,18 +263,13 @@ for slope = [4 2]
     
     % Labels
     ylabel({'Biomass Flux','[normalized units]'})
-    if counter == 0
-        xlabel('')
-        set(gca,'xticklabel',{})
-    else
         xlabel('Day of Year')
-    end
     
     % Annotations
-     text(0.93,0.9,['\xi = ',num2str(slope)],'fontsize',32,'HorizontalAlignment','center','edgecolor','k','Units','normalized')
+     %text(0.93,0.9,['\xi = ',num2str(slope)],'fontsize',32,'HorizontalAlignment','center','edgecolor','k','Units','normalized')
     if counter == 0
-        text(0.03,0.93,'(a)','fontsize',28,'HorizontalAlignment','center','edgecolor','w','Units','normalized')
-        text(0.5,1.25,'Papa\_summer','HorizontalAlignment','center','FontWeight','b','FontSize',30,'Units','normalized')
+        text(0.03,0.95,'(a)','fontsize',28,'HorizontalAlignment','center','edgecolor','none','Units','normalized','FontWeight','b','BackgroundColor','none')
+        text(0.5,1.22,'Papa\_summer','HorizontalAlignment','center','FontWeight','b','FontSize',40,'Units','normalized')
     end
 
     % second legend
@@ -320,18 +315,13 @@ for slope = [4 2]
     % Labels
     ylabel('')
     set(gca,'yticklabel',{})
-    if counter == 0
-        xlabel('')
-        set(gca,'xticklabel',{})
-    else
         xlabel('Day of Year')
-    end
 
     % Annotations
-    text(0.93,0.9,['\xi = ',num2str(slope)],'fontsize',32,'HorizontalAlignment','center','edgecolor','k','Units','normalized')
+    %text(0.93,0.9,['\xi = ',num2str(slope)],'fontsize',32,'HorizontalAlignment','center','edgecolor','k','Units','normalized')
     if counter == 0
-        text(0.03,0.93,'(b)','fontsize',28,'HorizontalAlignment','center','edgecolor','w','Units','normalized')
-        text(0.5,1.25,'Papa\_winter','HorizontalAlignment','center','FontWeight','b','FontSize',30,'Units','normalized')
+        text(0.03,0.95,'(b)','fontsize',28,'HorizontalAlignment','center','edgecolor','none','Units','normalized','FontWeight','b','BackgroundColor','none')
+        text(0.5,1.22,'Papa\_winter','HorizontalAlignment','center','FontWeight','b','FontSize',40,'Units','normalized')
     end
 
     % Second legend
@@ -345,4 +335,8 @@ for slope = [4 2]
     
     counter = counter +1;
     
-end
+end; clear slope counter
+
+set(gcf,'color','w')
+export_fig Fig7_biomass_export_flux_remin.png
+close all
