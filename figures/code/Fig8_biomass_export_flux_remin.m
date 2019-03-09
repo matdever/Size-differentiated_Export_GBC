@@ -196,7 +196,7 @@ cmap = [0    0.4470    0.7410
 %%
 fullfigure
 counter = 0;
-for slope = [4 2]
+for slope = 4%[4 2]
     
     for ii = 1:length(ws)
         B_meso(:,ii) = flux_meso(:,ii).*B0.*(ws(ii)/ws0)^((3-slope)/2);
@@ -217,7 +217,7 @@ for slope = [4 2]
             B_meso_remin([1:find(B_meso_remin(:,ii)>0,1,'first')-1 find(B_meso_remin(:,ii)>0,1,'last')+1:end],ii) = 1e-10;
         else
             B_meso(1:find(B_meso(:,ii)>0,1,'first')-1,ii) = 1e-10;
-            B_meso_remin(1:find(B_meso_remin(:,ii)>1e-9,1,'first')-1,ii) = 1e-10;
+            B_meso_remin(1:find(B_meso_remin(:,ii)>1e-9,1,'first')-1,ii) = 1e-10;  
         end
         
         B_submeso(1:find(B_submeso(:,ii)>0,1,'first')-1,ii) = 1e-10;
@@ -231,32 +231,31 @@ for slope = [4 2]
     
     
     % PAPA WINTER
+    axes
     if counter == 0
-        ax1 = axes;
-        set(gca,'position',[0.1   0.55   0.4   0.35])
-        POS = get(gca,'position');
-    else
-        axes(ax1)
+    set(gca,'position',[0.1   0.55   0.4   0.3])
+    elseif counter == 1
+    set(gca,'position',[0.1   0.2   0.4   0.3])
     end
-    
+    POS = get(gca,'position');
+
     % Plot Curves
     for ii = 5:-1:2
-        if counter == 0
-            h1(5-ii+1) = plot(time_meso+105,B_meso(:,ii)./unique(diff(time_meso)),'LineWidth',2,'Color',cmap(ii,:),'linestyle','-');
-        else
-            plot(time_meso+105,B_meso(:,ii)./unique(diff(time_meso)),'LineWidth',2,'Color',cmap(ii,:),'linestyle','--');
-        end
+        h1(5-ii+1) = plot(time_meso+105,B_meso(:,ii)./unique(diff(time_meso)),'LineWidth',2,'Color',cmap(ii,:),'linestyle','--');
         hold on
+        h2(5-ii+1) = plot(time_meso+105,B_meso_remin(:,ii)./unique(diff(time_meso)),'LineWidth',2,'Color',cmap(ii,:));
+        h3(5-ii+1) = plot(time_meso+105,B_meso_remin(:,ii)./unique(diff(time_meso)),'LineWidth',2,'Color',cmap(ii,:));
     end; clear ii
-    
+        
     % Make it pretty
     % Legend
-    
-    H = legend(ax1,h1,'w_s = 5','w_s = 1','w_s = 0.5','w_s = 0.025');
-    H.Location = 'northoutside';%[POS(1) POS(2)+POS(4)/2+0.1*POS(4) POS(3) POS(4)];
+    if counter == 0
+    H = legend(h2,'w_s = 5','w_s = 1','w_s = 0.5','w_s = 0.025');
+    H.Position = [POS(1) POS(2)+POS(4)/2+0.1*POS(4) POS(3) POS(4)];
     H.Orientation = 'horizontal';
     H.FontSize = 28;
     clear H
+    end
     
     % Axes
     set(gca,'yscale','log','ylim',[1e0 3e6],'ytick',[1 1e2 1e4 1e6],'fontsize',28)
@@ -264,54 +263,50 @@ for slope = [4 2]
     
     % Labels
     ylabel({'Biomass Flux','[normalized units]'})
-    xlabel('Day of Year')
-    
+        xlabel('Day of Year')
     
     % Annotations
-    if counter == 1
-        h = text(0.03,0.95,'(a)','fontsize',28,'HorizontalAlignment','center','edgecolor','none','Units','normalized','FontWeight','b','BackgroundColor','none')
+     %text(0.93,0.9,['\xi = ',num2str(slope)],'fontsize',32,'HorizontalAlignment','center','edgecolor','k','Units','normalized')
+    if counter == 0
+        text(0.03,0.95,'(a)','fontsize',28,'HorizontalAlignment','center','edgecolor','none','Units','normalized','FontWeight','b','BackgroundColor','none')
         text(0.5,1.22,'Papa\_summer','HorizontalAlignment','center','FontWeight','b','FontSize',40,'Units','normalized')
     end
-    
-    % Second legend
-    if counter == 1
+
+    % second legend
+    if counter == 0
         a = axes('position',get(gca,'position'),'visible','off');
-        h4(1) = line([0 0],[0 0],'color','k','linestyle','-','linewidth',2);
-        h4(2) = line([0 0],[0 0],'color','k','linestyle','--','linewidth',2);
-        H = legend(a,h4,'\xi = 4','\xi = 2','Location','South');
-        set(H,'fontsize',28)%,'Position',[0.28 POS(2)+0.02 0.0497 0.0258]);clear H
+        h4(1) = line([0 0],[0 0],'color','k','linestyle','--','linewidth',2);
+        h4(2) = line([0 0],[0 0],'color','k','linestyle','-','linewidth',2);        
+        H = legend(a,[h4],'remin OFF','remin ON','Location','south');
+        set(H,'fontsize',28,'Position',[0.28 POS(2)+0.02 0.0497 0.0258]);clear H
     end
     
     % PAPA SUMMER
+    axes
     if counter == 0
-        ax2 = axes;
-        set(gca,'position',[0.53   0.55   0.4   0.35])
-        POS2 = get(gca,'position');
-        
-    else
-        axes(ax2)
-    end
-    
+    set(gca,'position',[0.53   0.55   0.4   0.3])
+    elseif counter == 1
+    set(gca,'position',[0.53   0.2   0.4   0.3])
+    end        
+    POS = get(gca,'position');
     
     % Plot Curves
     for ii = 5:-1:2
-        if counter == 0
-            h2(5-ii+1) = plot(time_submeso,B_submeso(:,ii)./unique(diff(time_submeso)),'LineWidth',2,'Color',cmap(ii,:),'linestyle','-');
-        else
-            plot(time_submeso,B_submeso(:,ii)./unique(diff(time_submeso)),'LineWidth',2,'Color',cmap(ii,:),'linestyle','--')
-        end
+        h1(5-ii+1) = plot(time_submeso,B_submeso(:,ii)./unique(diff(time_submeso)),'LineWidth',2,'Color',cmap(ii,:),'linestyle','--');
         hold on
+        h2(5-ii+1) = plot(time_submeso,B_submeso_remin(:,ii)./unique(diff(time_submeso)),'LineWidth',2,'Color',cmap(ii,:));
+        h3(5-ii+1) = plot(time_submeso,B_submeso_remin(:,ii)./unique(diff(time_submeso)),'LineWidth',2,'Color',cmap(ii,:));
     end; clear ii
-    
+
     % Make it pretty
     % Legend
-    
-    H = legend(ax2,h2,'w_s = 5','w_s = 1','w_s = 0.5','w_s = 0.025');
-    H.Location = 'northoutside';%[POS2(1) POS2(2)+POS2(4)/2+0.1*POS2(4) POS2(3) 0.05];
+    if counter == 0
+    H = legend(h2,'w_s = 5','w_s = 1','w_s = 0.5','w_s = 0.025');
+    H.Position = [POS(1) POS(2)+POS(4)/2+0.1*POS(4) POS(3) POS(4)];
     H.Orientation = 'horizontal';
     H.FontSize = 28;
     clear H
-    
+    end
     
     % Axes
     set(gca,'yscale','log','ylim',[1e0 3e6],'ytick',[1 1e2 1e4 1e6],'fontsize',28)
@@ -320,28 +315,28 @@ for slope = [4 2]
     % Labels
     ylabel('')
     set(gca,'yticklabel',{})
-    xlabel('Day of Year')
-    
-    
+        xlabel('Day of Year')
+
     % Annotations
-    if counter == 1
+    %text(0.93,0.9,['\xi = ',num2str(slope)],'fontsize',32,'HorizontalAlignment','center','edgecolor','k','Units','normalized')
+    if counter == 0
         text(0.03,0.95,'(b)','fontsize',28,'HorizontalAlignment','center','edgecolor','none','Units','normalized','FontWeight','b','BackgroundColor','none')
         text(0.5,1.22,'Papa\_winter','HorizontalAlignment','center','FontWeight','b','FontSize',40,'Units','normalized')
     end
-    
+
     % Second legend
-    if counter == 1
+    if counter == 0
         a = axes('position',get(gca,'position'),'visible','off');
-        h4(1) = line([0 0],[0 0],'color','k','linestyle','-','linewidth',2);
-        h4(2) = line([0 0],[0 0],'color','k','linestyle','--','linewidth',2);
-        H = legend(a,h4,'\xi = 4','\xi = 2','Location','South');
+        h4(1) = line([0 0],[0 0],'color','k','linestyle','--','linewidth',2);
+        h4(2) = line([0 0],[0 0],'color','k','linestyle','-','linewidth',2);        
+        H = legend(a,h4,'remin OFF','remin ON','Location','South');
         set(H,'fontsize',28)%,'Position',[0.28 POS(2)+0.02 0.0497 0.0258]);clear H
-    end
+    end        
     
     counter = counter +1;
     
 end; clear slope counter
 
 set(gcf,'color','w')
-export_fig Fig6b_biomass_export_flux.png
+export_fig Fig7_biomass_export_flux_remin.png
 close all
