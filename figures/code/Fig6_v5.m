@@ -1,13 +1,13 @@
 clear
 
 %% Import (x,y,z) for each size class in winter and summer
-[x0025s,y0025s,z0025s] = importxyz('/Volumes/home/mdever/particleposition/doy25/wtotal0025mday_summer.csv');
-[x1s,y1s,z1s] = importxyz('/Volumes/home/mdever/particleposition/doy25/wtotal1mday_summer.csv');
-[x5s,y5s,z5s] = importxyz('/Volumes/home/mdever/particleposition/doy25/wtotal5mday_summer.csv');
+[x0025s,y0025s,z0025s] = importxyz('/Volumes/mdever/particleposition/doy25/wtotal0025mday_summer.csv');
+[x1s,y1s,z1s] = importxyz('/Volumes/mdever/particleposition/doy25/wtotal1mday_summer.csv');
+[x5s,y5s,z5s] = importxyz('/Volumes/mdever/particleposition/doy25/wtotal5mday_summer.csv');
 
-[x0025,y0025,z0025] = importxyz('/Volumes/home/mdever/particleposition/doy25/wtotal0025mday_winter.csv');
-[x1,y1,z1] = importxyz('/Volumes/home/mdever/particleposition/doy25/wtotal1mday_winter.csv');
-[x5,y5,z5] = importxyz('/Volumes/home/mdever/particleposition/doy25/wtotal5mday_winter.csv');
+[x0025,y0025,z0025] = importxyz('/Volumes/mdever/particleposition/doy25/wtotal0025mday_winter.csv');
+[x1,y1,z1] = importxyz('/Volumes/mdever/particleposition/doy25/wtotal1mday_winter.csv');
+[x5,y5,z5] = importxyz('/Volumes/mdever/particleposition/doy25/wtotal5mday_winter.csv');
 
 color0025 = [215,48,39]/256;
 color1 = [39,100,25]/256;
@@ -58,7 +58,7 @@ figure
 subplot(3,2,1)
 pcolor(0:rez:111,100:rez:200,medi0025'); shading interp
 cmocean('balance'); caxis([-50 50])
-set(gca,'fontsize',16,'xticklabels',{},'tickdir','out')
+set(gca,'fontsize',14,'xticklabels',{},'tickdir','out')
 H = colorbar; set(H,'location','northoutside','TickLength',0.04)
 hold on
 contour(0:rez:111,100:rez:200,medi0025',[0 0],'k')
@@ -70,7 +70,7 @@ text(109,188,'0.025 m/day','BackgroundColor','w','EdgeColor','k','fontsize',14,'
 subplot(3,2,3)
 pcolor(0:rez:111,100:rez:200,medi1'); shading interp
 cmocean('balance'); caxis([-50 50])
-set(gca,'fontsize',16,'xticklabels',{},'tickdir','out')
+set(gca,'fontsize',14,'xticklabels',{},'tickdir','out')
 hold on
 contour(0:rez:111,100:rez:200,medi1',[0 0],'k')
 axis tight; ylabel('y [km]')
@@ -80,7 +80,7 @@ text(109,188,'1 m/day','BackgroundColor','w','EdgeColor','k','fontsize',14,'Hori
 subplot(3,2,5)
 pcolor(0:rez:111,100:rez:200,medi5'); shading interp
 cmocean('balance'); caxis([-50 50])
-set(gca,'fontsize',16,'tickdir','out')
+set(gca,'fontsize',14,'tickdir','out')
 hold on
 contour(0:rez:111,100:rez:200,medi5',[0 0],'k')
 axis tight; ylabel('y [km]')
@@ -109,7 +109,7 @@ plot(N0025,Z,'color',color0025,'LineWidth',2);
 plot(N1,Z,'color',color1,'LineWidth',2);
 plot(N5,Z,'color',color5,'LineWidth',2);
 xlabel('Number of particles');ylabel('Depth [m]')
-set(gca,'XAxisLocation','top','FontSize',16,'YDir','reverse','XTickLabel',{})
+set(gca,'XAxisLocation','top','FontSize',14,'YDir','reverse','XTickLabel',{})
 grid on; box on
 h3 = line(get(gca,'xlim'),[80 80],'color','k','linestyle','--','linewidth',2);
 plot(N0025,Z,'color',color0025,'LineWidth',1.5)
