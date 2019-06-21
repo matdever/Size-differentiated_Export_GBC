@@ -15,7 +15,7 @@ clearvars -except glider cmap
 %% STEP 1 - Compute the TKE vs time. cannot use the full resolution, as it is domain integrated
 thefolder = pwd;
 
-cd /Volumes/mathieudever/PSOM_backup/Papa500_steroid
+cd /Volumes/mahadevanlab/mathieudever/PSOM_backup/PSOM_outputs/Papa_winter
 % Surface view
 depth = 50; % depth to plot in m
 lat = 50;   % Latitude of mid-domain (for f)
@@ -197,5 +197,5 @@ set(gca,'position',[POS(1)+0.05 POS(2) POS(3) POS(4)])
 
 cd(thefolder)
 set(gcf,'color','w')
-export_fig('Fig3_Papa500_winter.png','-r200')
-close all
+%export_fig('Fig3_Papa500_winter.png','-r200')
+%close all

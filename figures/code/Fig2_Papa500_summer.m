@@ -193,5 +193,5 @@ set(gca,'position',[POS(1)+0.05 POS(2) POS(3) POS(4)])
 cd(thefolder)
 
 set(gcf,'color','w')
-export_fig('Fig2_Papa500_summer.png','-r200')
-close all
+%export_fig('Fig2_Papa500_summer.png','-r200')
+%close all
