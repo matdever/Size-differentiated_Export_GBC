@@ -5,13 +5,13 @@ clear
 
 %% Import w for each size class in winter and summer
 tt = 25;
-[~,~,wt0025s] = importw('/Volumes/home/mdever/particlespeed/doy25/w0025mday_summer.csv');
-[~,~,wt1s] = importw('/Volumes/home/mdever/particlespeed/doy25/w1mday_summer.csv');
-[~,~,wt5s] = importw('/Volumes/home/mdever/particlespeed/doy25/w5mday_summer.csv');
+[~,~,wt0025s] = importw('/Volumes/mdever/particlespeed/doy25/w0025mday_summer.csv');
+[~,~,wt1s] = importw('/Volumes/mdever/particlespeed/doy25/w1mday_summer.csv');
+[~,~,wt5s] = importw('/Volumes/mdever/particlespeed/doy25/w5mday_summer.csv');
 
-[~,~,wt0025w] = importw('/Volumes/home/mdever/particlespeed/doy25/w0025mday_winter.csv');
-[~,~,wt1w] = importw('/Volumes/home/mdever/particlespeed/doy25/w1mday_winter.csv');
-[~,~,wt5w] = importw('/Volumes/home/mdever/particlespeed/doy25/w5mday_winter.csv');
+[~,~,wt0025w] = importw('/Volumes/mdever/particlespeed/doy25/w0025mday_winter.csv');
+[~,~,wt1w] = importw('/Volumes/mdever/particlespeed/doy25/w1mday_winter.csv');
+[~,~,wt5w] = importw('/Volumes/mdever/particlespeed/doy25/w5mday_winter.csv');
 
 %% Set colors for each class
 color0025 = [215,48,39]/256;
@@ -72,7 +72,7 @@ totalF4 = sum(N0025s(E<=0).*B0025_4.*E(E<=0))+sum(N1s(E<=0).*B1_4.*E(E<=0))+sum(
 totalFw = sum(N0025w(Ew<=0).*B0025_2.*Ew(Ew<=0))+sum(N1w(Ew<=0).*B1_2.*Ew(Ew<=0))+sum(N5w(Ew<=0).*B5_2.*Ew(Ew<=0));
 totalF4w = sum(N0025w(Ew<=0).*B0025_4.*Ew(Ew<=0))+sum(N1w(Ew<=0).*B1_4.*Ew(Ew<=0))+sum(N5w(Ew<=0).*B5_4.*Ew(Ew<=0));
 
-figure('position',[15 150 2119 1000])
+figure('position',[15 150 2119 1361])
 subplot(2,2,1)
 % Plot PDFs
 h1 = plot(E,N0025s.*B0025_2/totalB*100,'-','color',color0025,'linewidth',2);
@@ -84,25 +84,25 @@ patch([E(E<=0) 0 min(E(E<=0)) min(E(E<=0))],[N0025s(E<=0).*B0025_2/totalB*100 1e
 patch([E(E<=0) 0 min(E(E<=0)) min(E(E<=0))],[N1s(E<=0).*B1_2/totalB*100 1e-2 1e-2 N1s(1).*B1_2/totalB*100],color1,'edgecolor','none','facealpha',.3)
 patch([E(E<=0) 0 min(E(E<=0)) min(E(E<=0))],[N5s(E<=0).*B5_2/totalB*100 1e-2 1e-2 N5s(1).*B5_2/totalB*100],color5,'edgecolor','none','facealpha',.3)
 
-set(gca,'Yscale','log','FontSize',20)
-xlabel('w [m/day]')
+set(gca,'Yscale','log','FontSize',30)
+%xlabel('w [m/day]')
 ylabel('Relative Biomass [%]')
 grid on; axis tight; xlim([-10 10])
 ylim([1e-2 100])
-title('Summer','fontsize',35,'position',[1.6951e-05 18e+01 0]);
-text(-9.5,6e1,'(a)   \xi = 2','fontweight','b','fontsize',22)
+title('Summer','fontsize',50,'position',[-6 11e+01 0]);
+text(-9.5,6e1,'(a)   \xi = 2','fontweight','b','fontsize',30)
 HH = legend([h1 h2 h3],'0.025 m/day','1 m/day','5 m/day','location','southeast');
-set(HH,'fontsize',16)
+set(HH,'fontsize',25)
 
-axes('position',[.36 .82 .15 .15])
+axes('position',[.36 .82 .15 .14])
 bar(1,sum(N0025s(E<=0).*B0025_2.*E(E<=0)/totalF*100),'facecolor',color0025,'edgecolor',color0025)
 hold on
 bar(2,sum(N1s(E<=0).*B1_2.*E(E<=0)/totalF*100),'facecolor',color1,'edgecolor',color1);
 bar(3,sum(N5s(E<=0).*B5_2.*E(E<=0)/totalF*100),'facecolor',color5,'edgecolor',color5);
-set(gca,'YScale','log','fontsize',16,'xtick',[1:3],'XTickLabel',{},'yaxislocation','right')
+set(gca,'YScale','log','fontsize',30,'xtick',[1:3],'XTickLabel',{},'yaxislocation','right')
 grid on; box on
 ylim([1e-2 100])
-title('Relative Downward Biomass Flux','fontsize',18)
+title('Relative Downward Biomass Flux','fontsize',30,'position',[2 180 0])
 
 subplot(2,2,3)
 h1 = plot(E,N0025s.*B0025_4/totalB4*100,'-','color',color0025,'linewidth',2);
@@ -114,23 +114,23 @@ patch([E(E<=0) 0 min(E(E<=0)) min(E(E<=0))],[N0025s(E<=0).*B0025_4/totalB4*100 1
 patch([E(E<=0) 0 min(E(E<=0)) min(E(E<=0))],[N1s(E<=0).*B1_4/totalB4*100 1e-2 1e-2 N1s(1).*B1_4/totalB4*100],color1,'edgecolor','none','facealpha',.3)
 patch([E(E<=0) 0 min(E(E<=0)) min(E(E<=0))],[N5s(E<=0).*B5_4/totalB4*100 1e-2 1e-2 N5s(1).*B5_4/totalB4*100],color5,'edgecolor','none','facealpha',.3)
 
-set(gca,'Yscale','log','FontSize',20)
+set(gca,'Yscale','log','FontSize',30)
 xlabel('w [m/day]')
 ylabel('Relative Biomass [%]')
 grid on; axis tight; xlim([-10 10])
 ylim([1e-2 100])
-text(-9.5,6e1,'(c)   \xi = 4','fontweight','b','fontsize',22)
+text(-9.5,6e1,'(c)   \xi = 4','fontweight','b','fontsize',30)
 
 
-axes('position',[.36 .34 .15 .15])
+axes('position',[.36 .34 .15 .14])
 bar(1,sum(N0025s(E<=0).*B0025_4.*E(E<=0))/totalF4*100,'facecolor',color0025,'edgecolor',color0025)
 hold on
 bar(2,sum(N1s(E<=0).*B1_4.*E(E<=0))/totalF4*100,'facecolor',color1,'edgecolor',color1);
 bar(3,sum(N5s(E<=0).*B5_4.*E(E<=0))/totalF4*100,'facecolor',color5,'edgecolor',color5);
-set(gca,'YScale','log','fontsize',16,'xtick',[1:3],'XTickLabel',{},'yaxislocation','right')
+set(gca,'YScale','log','fontsize',30,'xtick',[1:3],'XTickLabel',{},'yaxislocation','right')
 grid on; box on
 ylim([1e-2 100])
-title('Relative Downward Biomass Flux','fontsize',18)
+title('Relative Downward Biomass Flux','fontsize',30,'position',[2 180 0])
 
 
 subplot(2,2,2)
@@ -143,24 +143,24 @@ patch([Ew(Ew<=0) 0 min(Ew(Ew<=0)) min(Ew(Ew<=0))],[N0025w(Ew<=0).*B0025_2/totalB
 patch([Ew(Ew<=0) 0 min(Ew(Ew<=0)) min(Ew(Ew<=0))],[N1w(Ew<=0).*B1_2/totalBw*100 1e-2 1e-2 N1w(1).*B1_2/totalBw*100],color1,'edgecolor','none','facealpha',.3)
 patch([Ew(Ew<=0) 0 min(Ew(Ew<=0)) min(Ew(Ew<=0))],[N5w(Ew<=0).*B5_2/totalBw*100 1e-2 1e-2 N5w(1).*B5_2/totalBw*100],color5,'edgecolor','none','facealpha',.3)
 
-set(gca,'Yscale','log','FontSize',20)
-xlabel('w [m/day]')
-ylabel('Relative Biomass [%]')
+set(gca,'Yscale','log','FontSize',30,'yticklabel',{})
+%xlabel('w [m/day]')
+%ylabel('Relative Biomass [%]')
 grid on; axis tight; xlim([-150 150])
 ylim([1e-2 100])
-title('Winter','fontsize',35,'position',[1.6951e-05 18e+01 0]);
-text(-143,6e1,'(b)   \xi = 2','fontweight','b','fontsize',22)
+title('Winter','fontsize',50,'position',[-90 11e+01 0]);
+text(-143,6e1,'(b)   \xi = 2','fontweight','b','fontsize',30)
 
 
-axes('position',[.8 .82 .15 .15])
+axes('position',[.8 .82 .15 .14])
 bar(1,sum(N0025w(Ew<=0).*B0025_2.*Ew(Ew<=0))/totalFw*100,'facecolor',color0025,'edgecolor',color0025)
 hold on
 bar(2,sum(N1w(Ew<=0).*B1_2.*Ew(Ew<=0))/totalFw*100,'facecolor',color1,'edgecolor',color1);
 bar(3,sum(N5w(Ew<=0).*B5_2.*Ew(Ew<=0))/totalFw*100,'facecolor',color5,'edgecolor',color5);
-set(gca,'YScale','log','fontsize',16,'xtick',[1:3],'XTickLabel',{},'yaxislocation','right')
+set(gca,'YScale','log','fontsize',30,'xtick',[1:3],'XTickLabel',{},'yaxislocation','right')
 grid on; box on
 ylim([1e-2 100])
-title('Relative Downward Biomass Flux','fontsize',18)
+title('Relative Downward Biomass Flux','fontsize',30,'position',[2 180 0])
 
 subplot(2,2,4)
 h1 = plot(Ew,N0025w.*B0025_4/totalB4w*100,'-','color',color0025,'linewidth',2);
@@ -173,23 +173,23 @@ patch([Ew(Ew<=0) 0 min(Ew(Ew<=0)) min(Ew(Ew<=0))],[N0025w(Ew<=0).*B0025_4/totalB
 patch([Ew(Ew<=0) 0 min(Ew(Ew<=0)) min(Ew(Ew<=0))],[N1w(Ew<=0).*B1_4/totalB4w*100 1e-2 1e-2 N1w(1).*B1_4/totalB4w*100],color1,'edgecolor','none','facealpha',.3)
 patch([Ew(Ew<=0) 0 min(Ew(Ew<=0)) min(Ew(Ew<=0))],[N5w(Ew<=0).*B5_4/totalB4w*100 1e-2 1e-2 N5w(1).*B5_4/totalB4w*100],color5,'edgecolor','none','facealpha',.3)
 
-set(gca,'Yscale','log','FontSize',20)
+set(gca,'Yscale','log','FontSize',30,'yticklabel',{})
 xlabel('w [m/day]')
-ylabel('Relative Biomass [%]')
+%ylabel('Relative Biomass [%]')
 grid on; axis tight; xlim([-150 150])
 ylim([1e-2 100])
-text(-143,6e1,'(d)   \xi = 4','fontweight','b','fontsize',22)
+text(-143,6e1,'(d)   \xi = 4','fontweight','b','fontsize',30)
 
 
-axes('position',[.8 .34 .15 .15])
+axes('position',[.8 .34 .15 .14])
 bar(1,sum(N0025w(Ew<=0).*B0025_4.*Ew(Ew<=0))/totalF4w*100,'facecolor',color0025,'edgecolor',color0025)
 hold on
 bar(2,sum(N1w(Ew<=0).*B1_4.*Ew(Ew<=0))/totalF4w*100,'facecolor',color1,'edgecolor',color1);
 bar(3,sum(N5w(Ew<=0).*B5_4.*Ew(Ew<=0))/totalF4w*100,'facecolor',color5,'edgecolor',color5);
-set(gca,'YScale','log','fontsize',16,'xtick',[1:3],'XTickLabel',{},'yaxislocation','right')
+set(gca,'YScale','log','fontsize',30,'xtick',[1:3],'XTickLabel',{},'yaxislocation','right')
 grid on; box on
 ylim([1e-2 100])
-title('Relative Downward Biomass Flux','fontsize',18)
+title('Relative Downward Biomass Flux','fontsize',30,'position',[2 180 0])
 
 set(gcf,'color','w')
 export_fig -r300 Fig7.png
