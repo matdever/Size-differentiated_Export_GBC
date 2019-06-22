@@ -58,26 +58,26 @@ figure
 subplot(3,2,1)
 pcolor(0:rez:111,100:rez:200,medi0025'); shading interp
 cmocean('balance'); caxis([-50 50])
-set(gca,'fontsize',12,'xticklabels',{},'tickdir','out')
+set(gca,'fontsize',9,'xticklabels',{},'tickdir','out')
 H = colorbar; set(H,'location','northoutside','TickLength',0.04)
 hold on
 contour(0:rez:111,100:rez:200,medi0025',[0 0],'k')
 axis tight; ylabel('y [km]')
 set(gca,'position',[0.1 .66 .33 .25])
 set(H,'position',[.12 .92 .3 .015])
-text(109,188,'0.025 m/day','BackgroundColor','w','EdgeColor','k','fontsize',14,'HorizontalAlignment','right','color',color0025)
-text(3,188,'(a)','BackgroundColor','w','EdgeColor','k','fontsize',14,'HorizontalAlignment','left','fontweight','b')
+text(109,188,'0.025 m/day','BackgroundColor','w','EdgeColor','k','fontsize',12,'HorizontalAlignment','right','color',color0025)
+text(3,188,'(a)','BackgroundColor','w','EdgeColor','k','fontsize',12,'HorizontalAlignment','left','fontweight','b')
 
 subplot(3,2,3)
 pcolor(0:rez:111,100:rez:200,medi1'); shading interp
 cmocean('balance'); caxis([-50 50])
-set(gca,'fontsize',12,'xticklabels',{},'tickdir','out')
+set(gca,'fontsize',9,'xticklabels',{},'tickdir','out')
 hold on
 contour(0:rez:111,100:rez:200,medi1',[0 0],'k')
 axis tight; ylabel('y [km]')
 set(gca,'position',[0.1 .365 .33 .25])
-text(109,188,'1 m/day','BackgroundColor','w','EdgeColor','k','fontsize',14,'HorizontalAlignment','right','color',color1);
-text(3,188,'(b)','BackgroundColor','w','EdgeColor','k','fontsize',14,'HorizontalAlignment','left','fontweight','b')
+text(109,188,'1 m/day','BackgroundColor','w','EdgeColor','k','fontsize',12,'HorizontalAlignment','right','color',color1);
+text(3,188,'(b)','BackgroundColor','w','EdgeColor','k','fontsize',12,'HorizontalAlignment','left','fontweight','b')
 
 subplot(3,2,5)
 pcolor(0:rez:111,100:rez:200,medi5'); shading interp
@@ -87,8 +87,8 @@ hold on
 contour(0:rez:111,100:rez:200,medi5',[0 0],'k')
 axis tight; ylabel('y [km]')
 set(gca,'position',[0.1 .07 .33 .25])
-text(109,188,'5 m/day','BackgroundColor','w','EdgeColor','k','fontsize',14,'HorizontalAlignment','right','color',color5);
-text(3,188,'(c)','BackgroundColor','w','EdgeColor','k','fontsize',14,'HorizontalAlignment','left','fontweight','b')
+text(109,188,'5 m/day','BackgroundColor','w','EdgeColor','k','fontsize',12,'HorizontalAlignment','right','color',color5);
+text(3,188,'(c)','BackgroundColor','w','EdgeColor','k','fontsize',12,'HorizontalAlignment','left','fontweight','b')
 
 % Compute PDFs
 Z = 0:.5:300;
@@ -112,14 +112,14 @@ plot(N0025,Z,'color',color0025,'LineWidth',2);
 plot(N1,Z,'color',color1,'LineWidth',2);
 plot(N5,Z,'color',color5,'LineWidth',2);
 xlabel('Number of particles');ylabel('Depth [m]')
-set(gca,'XAxisLocation','top','FontSize',12,'YDir','reverse','XTickLabel',{})
+set(gca,'XAxisLocation','top','FontSize',9,'YDir','reverse','XTickLabel',{})
 grid on; box on
 h3 = line(get(gca,'xlim'),[80 80],'color','k','linestyle','--','linewidth',2);
 plot(N0025,Z,'color',color0025,'LineWidth',1.5)
 plot(N1,Z,'color',color1,'LineWidth',1.5)
 plot(N5,Z,'color',color5,'LineWidth',1.5)
 set(gca,'Position',[0.6 0.06 0.3 0.85])
-text(max(get(gca,'xlim'))-.002,15,'(d)','BackgroundColor','w','EdgeColor','k','fontsize',14,'HorizontalAlignment','right','VerticalAlignment','middle','fontweight','b')
+text(max(get(gca,'xlim'))-.002,15,'(d)','BackgroundColor','w','EdgeColor','k','fontsize',12,'HorizontalAlignment','right','VerticalAlignment','middle','fontweight','b')
 
 % Mark the reference depth for vertical displacement
 scatter(max(get(gca,'xlim')),80+0.025*25,100,'v','filled','markerfacecolor',color0025)

@@ -189,10 +189,10 @@ bar(3,sum(N5w(Ew<=0).*B5_4.*Ew(Ew<=0))/totalF4w*100,'facecolor',color5,'edgecolo
 set(gca,'YScale','log','fontsize',40,'xtick',[1:3],'XTickLabel',{},'yaxislocation','right')
 grid on; box on
 ylim([1e-2 100])
-title('Relative Downward Flux','fontsize',40,'position',[2 200 0])
+title('Relative Downward Flux','fontsize',40,'position',[2 400 0])
 
 set(gcf,'color','w')
-export_fig -r300 Fig7.png
+%export_fig -r300 Fig7.png
 %%
 function [w,wsink,wtotal] = importw(filename)
 
