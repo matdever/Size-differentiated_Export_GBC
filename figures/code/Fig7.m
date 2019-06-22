@@ -192,7 +192,7 @@ ylim([1e-2 100])
 title('Relative Downward Flux','fontsize',40,'position',[2 200 0])
 
 set(gcf,'color','w')
-%export_fig -r300 Fig7.png
+export_fig -r300 Fig7.png
 %%
 function [w,wsink,wtotal] = importw(filename)
 
