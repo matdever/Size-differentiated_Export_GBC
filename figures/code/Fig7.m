@@ -160,7 +160,7 @@ bar(3,sum(N5w(Ew<=0).*B5_2.*Ew(Ew<=0))/totalFw*100,'facecolor',color5,'edgecolor
 set(gca,'YScale','log','fontsize',40,'xtick',[1:3],'XTickLabel',{},'yaxislocation','right')
 grid on; box on
 ylim([1e-2 100])
-title('Relative Downward Flux','fontsize',40,'position',[2 200 0])
+title('Percentage Downward Flux','fontsize',40,'position',[2 200 0])
 
 subplot(2,2,4)
 h1 = plot(Ew,N0025w.*B0025_4/totalB4w*100,'-','color',color0025,'linewidth',2);

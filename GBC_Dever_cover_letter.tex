@@ -1,0 +1,111 @@
+\documentclass[11pt]{article}
+
+\usepackage{kantlipsum}   %% only for demo
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{marvosym}
+\usepackage{graphicx}
+\usepackage[usenames, dvipsnames]{xcolor}
+\usepackage{ragged2e}
+
+\pagestyle{empty}
+
+\usepackage[scale=0.775, top = 1.5cm, bottom = 1cm]{geometry}
+\setlength{\parindent}{0pt}
+\addtolength{\parskip}{6pt}
+
+\def\firstname{Mathieu }
+\def\familyname{Dever}
+\def\FileAuthor{\firstname \familyname}
+\def\FileTitle{\firstname \familyname's cover letter}
+\def\FileSubject{Cover letter}
+\def\FileKeyWords{\firstname \familyname, Cover letter}
+
+\renewcommand{\ttdefault}{pcr}
+
+\usepackage{url}
+\urlstyle{tt}
+\ifpdf
+  \usepackage[pdftex,pdfborder=0,breaklinks,baseurl=http://,pdfpagemode=None,pdfstartview=XYZ,pdfstartpage=1]{hyperref}
+  \hypersetup{
+    pdfauthor   = \FileAuthor,%
+    pdftitle    = \FileTitle,%
+    pdfsubject  = \FileSubject,%
+    pdfkeywords = \FileKeyWords,%
+    pdfcreator  = \LaTeX,%
+    pdfproducer = \LaTeX}
+\else
+  \usepackage[dvips]{hyperref}
+\fi
+
+\begin{document}
+\sffamily   % for use with a résumé using sans serif fonts;
+
+%____________________
+%% HEADER
+%____________________
+
+% My information
+%\begin{minipage}[t]{.6\textwidth}
+%	\vspace{-0.5cm}
+%\raggedright
+%\includegraphics[width = 0.8\linewidth]{WHOImarkBLUE.eps}
+%\end{minipage}	
+\hfill
+\begin{minipage}[t]{.4\textwidth}
+\raggedleft%
+{\bfseries \firstname\familyname}\\[.35ex]
+\small\itshape%
+266 Woods Hole Rd., MS \#29\\
+Woods Hole, MA 02543-1050, U.S.A.\\[.35ex]
+\Letter~\href{mailto:mdever@whoi.edu}{mdever@whoi.edu}
+%\Mundus~\href{https://www2.whoi.edu/staff/mdever/}{www2.whoi.edu/staff/mdever/}
+\end{minipage}\\[0.5em]
+
+% The recipient's information
+\begin{minipage}[t]{.65\textwidth}
+\raggedright%
+{\bfseries Global Biogeochemical Cycles}\\[-.2cm]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{.3\textwidth}
+\raggedleft
+\today
+\end{minipage}\\[-.3cm]
+\raggedright
+
+\justifying
+%____________________
+%% OPENING
+%____________________
+\noindent Dear editor,\\
+%
+
+
+%____________________
+%% CONTENT
+%____________________
+Please find enclosed the a manuscript titled ``\textbf{Size-differentiated Export in Different Dynamical Regimes in the Ocean}". This study addresses the impacts of ocean dynamics at submeso-scales ($<$10 km) on the vertical fluxes of particulate organic matter. Due to the challenges associated with resolving submeso-scales observationally, in both space and time, we rely on a process-oriented numerical model and particle-tracking to quantify the changes in fluxes of particulate matter. The model is initialized to statistically represent ocean conditions at Station Papa, in the Subpolar Northeastern Pacific, as this is a site where the NASA-funded EXPORTS program will be focusing a large part of its observational effort. A key aspect of our work is to consider the interactions between vertical currents at submeso-scales, and the sinking velocities spectrum for particulate matter. 
+
+The main conclusion of this work is that the traditional one-dimensional paradigm of a vertical flux driven exclusively by fast-sinking particles does not hold when submeso-scales dynamics are present. Our findings can be summarized in three key points:
+
+\begin{itemize}
+	\item[(1)] Ocean dynamics in the subpolar Northeast Pacific, often described as an ``eddy desert", indeed exhibit submesoscale activity in the wintertime.
+	\item[(2)] Submesoscale dynamics generally enhance downward fluxes by increasing the contribution of slower-sinking particles to the total flux. The contribution of slower-sinking particles to the total flux is found to be at least significant, and can be dominant in certain conditions.
+	\item[(3)] Remineralization unexpectedly enhances the role played by slower-sinking particles in vertical fluxes of particulate matter.
+\end{itemize}
+
+We confirm that this work is original and has not been published elsewhere nor is it currently under consideration for publication elsewhere. We have no conflicts of interest to disclose.
+
+Thank you for your consideration of our work. Please address all correspondence concerning this manuscript to mdever@whoi.edu.\\[.5cm]
+
+%____________________
+%% CLOSING
+%____________________
+\noindent Cordially,\\[.2cm]
+%
+%\vfill
+%\noindent \includegraphics[scale=0.7]{/Users/mathieudever/Dropbox/signature.pdf}\\
+{\bfseries \firstname \familyname}
+\end{document}
