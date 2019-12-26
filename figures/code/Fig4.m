@@ -26,6 +26,21 @@ B0025_4 = B0*(0.025/wmax).^((3-slope)/2);
 B1_4 = B0*(1/wmax).^((3-slope)/2);
 B5_4 = B0*(5/wmax).^((3-slope)/2);
 
+% For Junge slope = 5
+slope = 5;
+% Compute biomass of 1 largest particle necessary to keep total biomass constant
+B0 = Btot*(wmax.^((3-slope)/2))/(2/(5-slope)*wmax.^((5-slope)/2) - 2/(5-slope)*wmin.^((5-slope)/2));
+B0025_5 = B0*(0.025/wmax).^((3-slope)/2);
+B1_5 = B0*(1/wmax).^((3-slope)/2);
+B5_5 = B0*(5/wmax).^((3-slope)/2);
+
+% For Junge slope = 6
+slope = 6;
+% Compute biomass of 1 largest particle necessary to keep total biomass constant
+B0 = Btot*(wmax.^((3-slope)/2))/(2/(5-slope)*wmax.^((5-slope)/2) - 2/(5-slope)*wmin.^((5-slope)/2));
+B0025_6 = B0*(0.025/wmax).^((3-slope)/2);
+B1_6 = B0*(1/wmax).^((3-slope)/2);
+B5_6 = B0*(5/wmax).^((3-slope)/2);
 %%
 
 % Set colors for each class
@@ -98,7 +113,7 @@ end
 set(gca,'xtick',Xtick,'xticklabel',xticklab)
 xlabel('Equivalent Stokes radius [\mum]')
 set(gcf,'color','w')
-export_fig -r300 Fig4a.png
+%export_fig -r300 Fig4a.png
 %%
 
 
@@ -190,4 +205,4 @@ end
 set(gca,'xtick',Xtick,'xticklabel',xticklab)
 xlabel('Equivalent Stokes radius [\mum]')
 set(gcf,'color','w')
-export_fig -r300 Fig4b.png
+%export_fig -r300 Fig4b.png

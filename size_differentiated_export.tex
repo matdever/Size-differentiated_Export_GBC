@@ -5,7 +5,7 @@
 \usepackage{ulem}
 
 % Trackchanges package
-%\usepackage{trackchanges}
+\usepackage{trackchanges}
 %% PLEASE USE THE FOLLOWING COMMANDS
 %   \note[editor]{The note} 
 %   \annote[editor]{Text to annotate}{The note} 
@@ -66,125 +66,7 @@
 	%  BEGIN ARTICLE
 	%
 	%% ------------------------------------------------------------------------ %%
-	\pagebreak
-	
-	\begin{itemize}
-	{\footnotesize
-	\item \fixme{First, it is not clear why the authors have chosen to release particles only at the base of the euphotic zone between 75-85, which is within 20m of the horizon defined as the export depth (100m). In fact, particles are produce throughout the entire euphotic zone, and the production rate (i.e. NPP) is generally highest within the first 10-20m where light is ample. Distributing the particles through the euphotic zone in this way would almost certainly diminish the contribution of small particles to export, as they would spend significantly longer remineralizing within the mixed layer before passing the export horizon. I suggest a new simulation with particles initially distributed between 0-80m, or a clearer reasoning for selecting 75-85m as the release depth.}
-	\rep{We were actually careful to never use the words ``depth horizon", for the same reason that we focus on vertical fluxes as opposed to ``export". Nevertheless, The base of the euphotic zone is preferred in our study for three main reasons: 
-		\begin{enumerate}
-			\item A series of non-trivia important transformations occur in the euphotic zone (e.g., grazing, material packaging, and many others; see Denman and Pena 1999 for example) that are not captured in our idealized setup, and are far beyond the scope of our study. By seeding particles at the base of the euphotic layer, we focus on the particulate material available to export, where remineralization and sinking are the dominant processes driving vertical fluxes (other than advection. as demonstrated in this study). 
-			\item The main results are expressed in terms of vertical fluxes. Vertical fluxes of particulate matter in the ML are not necessarily relevant to particle export, for the reasons detailed above. Including fluxes in the ML would introduce a bias into our results that is not relevant to our objectives.
-			\item Seeding over 80 m instead of 10 m would require 8 times as many particles, as it is important to preserve particle density to adequately capture the physical dynamics as small scale (i.e., if particle seeding is too sparse, the presence of submesoscale dynamics would have little impact as no particles would be moving through these features). This would bring the total amount of particles tracked from $\sim$6 millions to $\sim$48 millions, largely limiting the number of experiments we could conduct in a reasonable time frame.
-		\end{enumerate}
-	
-	\item \fixme{Second, it is unclear why 5m/day is selected for the largest particle class. Studies using Underwater Vision Profilers reveal that a large portion of the particle flux is contributed by large aggregates of 0.1-5mm, which can have sinking speeds above 100m/day (see Guidi et al. 2008, Kiko et al. 2017). Comparing the summer and winder simulations, it seems that small particles only dominate the export flux when vertical advective velocities exceed the large particle sinking velocity. This condition would not be met if an aggregate particle class with sinking velocity of 100m/day were included. I suggest the inclusion of an additional "large aggregate" size class with appropriate sinking speed.}
-	
-	\item \fixme{Finally, the analysis demonstrated in Figures 7 and 8 does not seem appropriate for gauging the contribution of small and large particles to export, and the role of remineralization. As far as I understand, the insets in these figures show the flux associated with each particle class at 25 days after the particle release, computed based on their abundance and velocity (advective plus sinking). But why is the flux at day 25 the important quantity? By this time, the large particles have had time to decay to a size where their sinking velocity is negligible, and therefore their contribution to the flux will be small. But, what about all of the large particles that settled across the export horizon (100m) earlier in the simulation, while their sinking velocity is still high? Really, we should be interested in how much of the initial biomass in each size category has "escaped" through the export horizon by the end of the simulation, i.e. their time-integrated contribution to export. For particles released at 80m, sinking at 5m/day and remineralizing at a rate of 0.13/day, it seems that at least 50\% of the inital biomass in the large size category must be exported through the 100m horizon, before remineralizing. In contrast, Figure 6 shows that only a very small fraction of the small particles reach 100m in winter, even when they are not remineralizing. It therefore seems that even in winter, large particles must dominate the integrated export flux in the simulation with remineralization, contradicting the second major conclusion of the study. I suggest the authors repeat their analysis, comparing time-integrated export through 100m in order to assess the contribution of large vs. small particles.}
-	
-	\item \sout{Line 306: Is it three weeks, or 28 days (four weeks)?}
-	
-	\item \sout{Figure 7+8: It would be useful to point out either in the caption or axis label that the x axes are the vertical velocity combining both sinking and advective components, and that the velocity in the legends is the initial sinking velocity. This confused me for a few minutes.}
-	
-	\item \fixme{Acknowledgements: Will the model output be archived for public access?}
-}	
-	\end{itemize}
-	\pagebreak
-	
-	\color{red}
-	\section*{Range of sinking speeds.}
-	The sinking speed examined by the authors are 0.025, 0.05, 1 and 5 m/d. All these values would be considered as "slow sinking rate" by the community. Yet, the manuscript concludes on the relative contribution of slow and fast sinking particles, which is misleading. It also means that the authors cannot really conclude about the relative role of particles that have sinking rates similar in magnitude or faster than submesoscale motions (i.e. 50-300 m/d).
-	
-	\begin{itemize}
-	\item Throughout the text, the authors should be very clear about what they call fast and slow sinking particles. They should also compare the values they use to existing observations of rates. I recommend to see Baker et al 2017 or Riley et al 2016 for example who present in-situ observations of sinking speed and define slow < 20 m/d and fast > 20 m/d. Also note that this nomenclature is consistent with the rates used in ocean biogeochemical models, which usually have a fast sinking rate of 50-200 m/d, and sometimes an additional pool with slow sinking rate of 1-5 m/d. 
-	
-	
-	\item The authors need to justify their choice, discuss the implications of this choice and explain how it informs the current view of the community on POC export. The authors should justify the narrow range of vertical velocity they explore. Prior observation-based studies emphasize the importance of particles sinking at slow rates (< 10 m/d) but also those sinking at very fast rates similar in magnitude to submesoscale vertical motions (200-300 m/d) (e.g. Baker et al 2017, Riley et al 2016, Stuckel et al. 2017b). What are the reasons to look at only very slow sinking particles? Is it because of limitations related to the Stokes Law? Is it because the model is not adapted to look at faster sinking rates.
-	
-	\item By limiting their study to slow sinking particles, the authors target by design the particles that will be most sensitive to submesoscale dynamics (see Stukel et al) and exclude particles that sink with rates similar or faster than submesoscale motions and that can efficiently export at depth and participate to carbon sequestration. Indeed, submesoscale is largely trapped in the upper ocean and only have a limited impact on export at greater depth (see previous discussions of these effects in Stukel et al, Erikson et al and Resplandy et al). The authors should acknowledge these limitations and discuss their implications.
-	
-	\item The author could introduce the study by acknowledging up front that slow sinking particles are the particles most impacted by submesoscale (as shown in previous papers) and this is why they are the focus of this paper that explores the sensitivity to size spectrum etc. 
-	\end{itemize}
-	
-	\section*{Remineralization and slower sinking particle contribution.}
-	The choice of some parameter appears arbitrary. I like the fact that the authors sweep the parameter space of the size spectrum ($\xi$ = 2, 3, 4). The choice of this parameteris however key in the conclusion that are drawn (contribution of slower-sinking particles , L557-558). 
-	
-	\begin{itemize}
-	\item Could you please present the case where the biomass spectrum slope is positive? Same as Figure 8 but with ξ = 2 and contrast it with the case of $\xi$ = 4?
-	
-	\item The authors briefly mention that slopes greater than 3 have been observed (L640). Could this discussion be augmented? What observational constraints do we have on the spectrum slope? Do we know if the biomass spectrum slope is positive or negative? Is it likely to change sign with season, biomes, looming conditions etc.? (not necessarily around station PAPA). Bridging your modeling results with available observations would greatly benefit the paper and facilitate the use of your conclusions by the community (please look into prior work to make these links). I strongly encourage you to discuss the implications of this result, what they mean for people measuring particles and export, what they should be looking for in the field? 
-	
-	\item The effect of negative vs positive biomass spectrum slope is translated in your abstract by the rather vague "under specific conditions ..." (L27). Please try to clarify what this means in Layman terms in the abstract.
-	
-	\item How do your results depend on the remineralization (0.13 d-1) length-scale? 
-	\end{itemize}
-	
-	\section*{Literature Survey and Discussion}
-	It is very concerning that the authors are missing key recent papers published on the subject, including observation-based papers that should be discussed with the author's modeling results. Please find below a list of relevant papers that should be included in introduction and/or discussion. This list is absolutely not exhaustive. 
-	
-	
-	
-	\section*{The introduction lacks some coherence. The different paragraphs are not clearly connected and the flow is rather tedious. It needs streamlining. }
-		\begin{itemize}
-	\item	The second paragraph presents detailed theoretical arguments about particle size spectrum and sinking velocities. 
-	\item	The third paragraph list some previous results suggesting a role of submesoscale vertical velocities in exporting carbon. Note that numerous recent papers, including observation-based studies, are missing from this list (see below).
-	\item	The fourth paragraph describe submesoscale frontogenesis.
-	\item	The fifth paragraph repeat the idea that submesoscale can export POC.
-	\item	The sixth paragraph add to the first paragraph on our knowledge about particle size and sinking speed. I would merge paragraphs 6 and 2. I would also strongly suggest to mention observations (paragraph 6) and what observed sinking speeds are (please add references for this. E.g. Baker et al 2017, Riley et al 2016 etc.). Then I would present the theoretical arguments (paragraph 2). 
-	\item	Paragraphs 8 and 7 should be merged with paragraph 7. I suggest to present what the aim of the study is (some of paragraph 8) before mentioning the processes that your model does not resolve (e.g. surface wave in paragraph 7)
-		\end{itemize}
-	
-	\section*{Abstract}
-	The abstract is long and technical but at the same time vague in presenting the key results to the reader. For example, the following sentences list raw modeling results without hinting at the mechanistic drivers of this response in the model. 
-	"a steeper particle size spectrum increases the relative contribution of smaller slow-sinking particles." "Implementing a remineralization scheme generally decreases the total amount of biomass exported[...]", "Under specific conditions, remineralization processes counter-intuitively enhance the role of slower-sinking particles."
-	
-	
-	\section*{Section 2.2}
-	The method section is detailed and relatively clear except for section 2.2.3. To clarify this section, the author should give some contextual information about the different metrics (N, B etc.) and why they are presented to the reader. 
-	\begin{itemize}
-			\item Link to observational constraints on the slope of the size spectrum (see comment \#2)?
-	
-	\item Explain why you examine the dependence between these different metrics, e.g. something like "we explore the sensitivity of X and Y to the particle size spectrum ..... We consider three distributions with slopes of Z, ZZ.." etc.
-		\end{itemize}
-	
-	
-	\section*{Minor comments:}
-	\begin{itemize}	
-	\item Can you specify if and how equation 9 differs from the traditional Martin curve?
-	
-	\item L40: the last sentence of the first paragraph is vague and unnecessary. I would delete it.
-	\item \color{black}\sout{L 162: Problem with reference Laboratory, 2018?}\color{red}
-	
-	\item Figures 7 and 8. Please label the size classes on the insert or at least mention the colors-size relationship in the caption.
-	
-	\item The model data used in this study should be made available as requested by AGU standards.
-		\end{itemize}
-		
-	References. 
-	Baker, C.A., Henson, S.A., Cavan, E.L., Giering, S.L.C., Yool, A., Gehlen, M., Belcher, A., Riley, J.S., Smith, H.E.K., Sanders, R., 2017. Slow-sinking particulate organic carbon in the Atlantic Ocean: Magnitude, flux, and potential controls. Global Biogeochemical Cycles 31, 1051-1065. https://doi.org/10.1002/2017GB005638\\
-	Boyd, P.W., Claustre, H., Levy, M., Siegel, D.A., Weber, T., 2019. Multi-faceted particle pumps drive carbon sequestration in the ocean. Nature 568, 327-335. https://doi.org/10.1038/s41586-019-1098-2\\
-	Erickson, Z.K., Thompson, A.F., 2018. The Seasonality of Physically Driven Export at Submesoscales in the Northeast Atlantic Ocean. Global Biogeochemical Cycles 32. https://doi.org/10.1029/2018GB005927\\
-	Llort, J., Langlais C., Matear R., Moreau S., Lenton A., Strutton Peter G., 2018. Evaluating Southern Ocean Carbon Eddy‐Pump From Biogeochemical‐Argo Floats. Journal of Geophysical Research: Oceans 123, 971-984. https://doi.org/10.1002/2017JC012861\\
-	Resplandy, L., Lévy, M., McGillicuddy, D.J., 2019. Effects of Eddy‐Driven Subduction on Ocean Biological Carbon Pump. Global Biogeochem. Cycles 2018GB006125. https://doi.org/10.1029/2018GB006125\\
-	Riley, J.S., Sanders, R., Marsay, C., Moigne, F.A.C.L., Achterberg, E.P., Poulton, A.J., 2012. The relative contribution of fast and slow sinking particles to ocean carbon export. Global Biogeochemical Cycles 26. https://doi.org/10.1029/2011GB004085\\
-	Stukel, M.R., Aluwihare, L.I., Barbeau, K.A., Chekalyuk, A.M., Goericke, R., Miller, A.J., Ohman, M.D., Ruacho, A., Song, H., Stephens, B.M., Landry, M.R., 2017a. Mesoscale ocean fronts enhance carbon export due to gravitational sinking and subduction. Proceedings of the National Academy of Sciences 114, 1252-1257. https://doi.org/10.1073/pnas.1609435114\\
-	Stukel, M.R., Ducklow, H.W., 2017. Stirring Up the Biological Pump: Vertical Mixing and Carbon Export in the Southern Ocean. Global Biogeochem. Cycles 31, 2017GB005652. https://doi.org/10.1002/2017GB005652\\
-	Stukel, M.R., Song, H., Goericke, R., Miller, A.J., 2017b. The role of subduction and gravitational sinking in particle export, carbon sequestration, and the remineralization length scale in the California Current Ecosystem: Subduction and sinking particle export in the CCE. Limnology and Oceanography 63, 363-383. https://doi.org/10.1002/lno.10636\\
-	
-	\vfill
-	
-	\pagebreak
 
-	\begin{itemize}
-	\item Regarding submesoscales during the summer -- it would be worth calculating the mixed layer deformation radius during summer.  I suspect that it is at or less than your model resolution.  This may mean that the real ocean could have a summertime advection of particles just at very small scales (and unlikely to penetrate too deep).  Worth considering in your interpretation/discussion of results.
-
-	\item John Taylor has a nice paper (JPO 2018) where we looked at a similar problem with his LES and in some cases, buoyant particles. It might be worth citing.
-
-	\item I know computing time is always an issue, but it would be interesting to run these at higher (or lower) resolution to see how the fluxes change.  I would be surprised if they were converging -- in fact, I am not sure you would ever expect convergence depending on the wavenumber spectrum of w.
-	\end{itemize}
-	
-	\pagebreak
-	\color{black}
 	\section{Introduction}
 	
 	Photosynthesis in the sunlit upper ocean and the production of Particulate Organic Carbon (POC) takes up dissolved inorganic carbon and facilitates the uptake of CO$_2$ from the atmosphere. The sinking of POC exports organic carbon from the upper ocean to the interior, leading to the sequestration of carbon \citep{Falkowski_1998} on timescales ranging from days to years depending on the sinking depth and  circulation. Understanding the mechanisms driving the export of POC from the ocean's surface to the interior is therefore crucial to better constrain Earth's carbon budget.
@@ -313,7 +195,7 @@
 	
 	In each particle-tracking experiment, four different classes of particles are released. Each particle class is characterized by a different sinking velocity: 0.025, 0.05, 1, and 5 m/day. The slowest-sinking class is essentially selected to represent non-sinking particles: based on the setup of our experiments, the slowest-sinking particles would take 800 days on average to be exported to a depth of 100 m through gravitational sinking, a timescale much greater than commonly observed remineralization timescales. The fastest-sinking velocity is chosen as an end-member velocity class of particle that will be exported in its entirety over the course of our experiment. %The results presented for the 5 m/day sinking class can therefore be extrapolated to any class with a higher sinking velocity.
 	
-	The advective timestep for particles is set to 1.5 hours. The flow field is linearly interpolated in time between model outputs, justifying the higher temporal resolution used for particle tracking in \textit{Papa\_winter}. Particle positions are saved every 3 hours, along with key model variables interpolated onto the particle positions (e.g., density, vorticity). Particles are tracked for four weeks (28 days). Each particle-tracking experiment contains 1,971,717 particles per sinking-velocity class, for a total of 9,858,585 particles. Particles located deeper than the maximum winter mixed layer \citep[i.e., 100 m;][]{Pelland_2016, Plant_2016} are considered exported, as they will likely not be re-entrained into the mixed layer.
+	The advective timestep for particles is set to 1.5 hours. The flow field is linearly interpolated in time between model outputs, justifying the higher temporal resolution used for particle tracking in \textit{Papa\_winter}. Particle positions are saved every 3 hours, along with key model variables interpolated onto the particle positions (e.g., density, vorticity). Particles are tracked for \change{three}{four} weeks (28 days). Each particle-tracking experiment contains 1,971,717 particles per sinking-velocity class, for a total of 9,858,585 particles. Particles located deeper than the maximum winter mixed layer \citep[i.e., 100 m;][]{Pelland_2016, Plant_2016} are considered exported, as they will likely not be re-entrained into the mixed layer.
 	
 	\subsubsection{Density and Biomass Spectra}
 	\label{sec: equations_biomass}
@@ -416,7 +298,7 @@
 	\begin{figure}[t]
 		\centering
 		\includegraphics[width = 1\linewidth]{Fig7.png}
-		\caption{Probability Distribution Function (PDF) of relative biomass versus total vertical velocity (sinking + advective) along particle trajectories in the summer case [left] and winter case [right], with a Junge slope of 2 [top] and 4 [bottom]. Inserts show the integrated relative downward biomass flux associated with each sinking-velocity class, categorized according to their initial sinking velocity. Both winter dynamics and steeper Junge slopes tend to increase the relative contribution of slower-sinking particles.}
+		\caption{Probability Distribution Function (PDF) of relative biomass versus total vertical velocity \add{(sinking + advective)} along particle trajectories in the summer case [left] and winter case [right], with a Junge slope of 2 [top] and 4 [bottom]. Inserts show the integrated relative downward biomass flux associated with each sinking-velocity class, categorized according to their initial sinking velocity. Both winter dynamics and steeper Junge slopes tend to increase the relative contribution of slower-sinking particles.}
 		\label{fig: biomass_export}
 	\end{figure}
 	
@@ -435,7 +317,7 @@
 	\begin{figure}[t!]
 		\centering
 		\includegraphics[width = 1\linewidth]{Fig8.png}
-		\caption{Probability Distribution Function (PDF) of relative biomass versus total vertical velocity (sinking + advective) along particle trajectories in the summer case [left] and winter case [right], ignoring [top] and including [bottom] particle remineralization, for $\xi$ = 4 and 25 days after particle release. Inserts show the integrated relative downward biomass flux associated with each sinking-velocity class, categorized according to their initial sinking velocity. Remineralization processes have the greatest impact on fast-sinking particles, especially in summer dynamics.}	
+		\caption{Probability Distribution Function (PDF) of relative biomass versus total vertical velocity \add{(sinking + advective)} along particle trajectories in the summer case [left] and winter case [right], ignoring [top] and including [bottom] particle remineralization, for $\xi$ = 4 and 25 days after particle release. Inserts show the integrated relative downward biomass flux associated with each sinking-velocity class, categorized according to their initial sinking velocity. Remineralization processes have the greatest impact on fast-sinking particles, especially in summer dynamics.}	
 		\label{fig: biomass_export_remin}
 	\end{figure}
 	In a advectively-driven system where $\left<w_sB\right> < \left<wB\right>$, the relative amount of biomass content in a particle class becomes important and dictates the respective contribution of each particle class to the total downward biomass fluxes. This shift from a gravitationally-driven to an advectively-driven system is observed when implementing particle remineralization in the summer (Figure \ref{fig: biomass_export_remin}c): in the absence of remineralization, faster-sinking particles dominate the downward biomass fluxes (60\%; see Figure \ref{fig: biomass_export_remin}a). When remineralization processes are considered, slower-sinking particles become the dominant contributor to biomass fluxes (see inset in Figure \ref{fig: biomass_export_remin}c). As shown in Figure \ref{fig: biomass_export}, downward biomass fluxes in the wintertime are generally advectively-driven, due to the larger vertical velocities associated with wintertime ocean dynamics. Biomass fluxes are dominated by the slower-sinking particles, representing 82\% of the downward biomass flux (Figure \ref{fig: biomass_export_remin}b). Even after implementing our remineralization scheme, slower-sinking particles remain the largest contributor to downward biomass fluxes (87\%; see Figure \ref{fig: biomass_export_remin}d).
