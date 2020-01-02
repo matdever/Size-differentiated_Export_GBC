@@ -51,6 +51,7 @@ Response to reviewers\\}
 \section{Response to Editor's comments}
 
 \section{Comments from Reviewer  \#1}
+\subsection*{Major point \#1}
 \small
 \textit{First, it is not clear why the authors have chosen to release particles only at the base of the euphotic zone between 75-85, which is within 20m of the horizon defined as the export depth (100m). In fact, particles are produced throughout the entire euphotic zone, and the production rate (i.e. NPP) is generally highest within the first 10-20m where light is ample. Distributing the particles through the euphotic zone in this way would almost certainly diminish the contribution of small particles to export, as they would spend significantly longer remineralizing within the mixed layer before passing the export horizon. I suggest a new simulation with particles initially distributed between 0-80m, or a clearer reasoning for selecting 75-85m as the release depth.\\}
 
@@ -66,14 +67,18 @@ Additionally, the base of the euphotic zone is preferred in our study for three 
 
 Finally, the small particles released at the base of the euphotic layer do not aim to represent small particles at the time of particle production. It can also represent larger particles at production that went through remineralization in the ML.
 
-Based on this comment, the text has been modified in Section 2.2.2 to better justify the choices outlined above  \\
+Based on this comment, the text has been modified in Section 2.2.2 to better justify the choices outlined above.\\
 
-	 
+\subsection*{Major point \#2}
 \textit{Second, it is unclear why 5m/day is selected for the largest particle class. Studies using Underwater Vision Profilers reveal that a large portion of the particle flux is contributed by large aggregates of 0.1-5mm, which can have sinking speeds above 100m/day (see Guidi et al. 2008, Kiko et al. 2017). Comparing the summer and winter simulations, it seems that small particles only dominate the export flux when vertical advective velocities exceed the large particle sinking velocity. This condition would not be met if an aggregate particle class with sinking velocity of 100m/day were included. I suggest the inclusion of an additional "large aggregate" size class with appropriate sinking speed.\\}
 
-This is a good, thought provoking, point about how does these results for sinking rates much larger than any advective vertical velocity? First, we would like to comment on \textit{``Comparing the summer and winter simulations, it seems that small particles only dominate the export flux when vertical advective velocities exceed the large particle sinking velocity."}; This is not necessarily exact in our case. At any given time, between 10 and 15\% of the vertical velocity over the model domain is larger than 5 m/day -- our fastest sinking rate -- and an even smaller percentage is sampled by the Lagrangian particles.
+\textit{``it is unclear why 5m/day is selected for the largest particle class."\\}
+The choice of 5m/day sinking rates as the ``face-sinking"  class is justified on lines 300-301 of the original manuscript. It is based on the PDFs of the advective vertical velocity. In our case, 5 m/day is faster than 85-90\% of the vertical velocity modeled in our domain at any given time. We have added some text in Section 2.2.2 to make the justification clearer to the reader.\\
 
-However, your comment is very relevant: What do our findings mean for sinking rates far exceeding the maximum modeled vertical velocities? In that case, $w = w_s$, as the sinking rate largely dominate. We want to know if the ratio of fluxes of two large sinking velocity is greater and smaller than one (i.e., the slope of the biomass flux spectrum is positive or negative):
+\textit{``Comparing the summer and winter simulations, it seems that small particles only dominate the export flux when vertical advective velocities exceed the large particle sinking velocity."\\}
+This is therefore not exact in this case. As mentioned, at any given time, between 10 and 15\% of the vertical velocity over the model domain is smaller than 5 m/day -- our fastest sinking rate -- and an even smaller percentage is sampled by the Lagrangian particles. If \textit{``vertical advective velocities exceed the large particle sinking velocity"}, it would be temporary and very rare.\\
+
+However, your comment is very relevant: What do our findings mean for sinking rates far exceeding the maximum modeled vertical velocities? In that case, $w \approx w_s$, as the sinking rate largely dominate. We want to know if the ratio of fluxes of two large sinking velocity is greater and smaller than one (i.e., the slope of the biomass flux spectrum is positive or negative):
 
 \begin{equation}
 	\frac{B_2w_2}{B_1w_1} >1 \quad \text{with} \quad w_2 > w_1
@@ -84,13 +89,14 @@ Using Equation 8 in the main text, we obtain:
 	\frac{B_0\left(\frac{w_1}{w_0}\right)^{\frac{3-\xi}{2}}w_1}{B_0\left(\frac{w_2}{w_0}\right)^{\frac{3-\xi}{2}}w_2} &> 1\\[.2cm]
 	\left(\frac{w_2}{w_1}\right)^{\frac{5-\xi}{2}} &>1
 \end{align}	
-which is only true for $w_2 > w_1$ if $\xi<$5. In other words, if the Junge slope is larger than 5, the slope of the particle size, biomass, AND biomass flux is negative. While large, a value of $\xi>5$ is not uneralistic, as it has been estimated from satellite-based algorithm in \cite{Kostadinov_2009}.
+which is only true for $w_2 > w_1$ if $\xi<$5. In other words, if the Junge slope is larger than 5, the slope of the particle size, biomass, AND biomass flux is negative. While large, a value of $\xi>5$ is not unrealistic, as it falls within the range of $\xi$ obtained from satellite-based estimates \citep{Kostadinov_2009}.
 
-To directly address your comment, it is true that for very large aggregates with sinking rates far exceeding the order of magnitude of vertical velocities, the contribution of slower sinking particles is not dominant. That has been established a while ago, and is the basis of the traditional 1-D model challenged in our work. Our study demonstrates the limitations of such a paradigm, as one considers slower-sinking particles classes. Furthermore, for the largest aggregate to constantly be driving the biomass flux, it would require an infinite reservoir of those large particles to be able to relate their larger flux to larger export. The biomass flux due to the aggregates would be larger until the source is exhausted -- which is likely to happen more quickly for 100 m/day particles than for smaller particles.
+To directly address your comment, it is true that for very large aggregates with sinking rates far exceeding the order of magnitude of vertical velocities, the contribution of slower sinking particles is not dominant. We believe it to be well-established, and is the basis of the traditional 1-D model commonly used. Our study demonstrates the limitations of this paradigm, as one considers slower-sinking particles classes. Furthermore, for the largest aggregate to constantly be driving the biomass flux, it would require an infinite reservoir of those large particles to be able to relate their larger flux to larger export. The biomass flux due to the aggregates would be larger until the source is exhausted -- which is likely to happen more quickly for 100 m/day particles than for smaller particles. In fact, export from very fast sinking particles (e.g., 100 m /day) tend to occur as events \citep{Kiko_2017}.
 Additionally, this paradigm is only true if the slope of the particle-size spectrum is smaller than $\sim$5 (based on our scaling).
 
-Including a ``large aggregate" size class sinking at 100m/day, for example, would not provide much more interesting information, in our opinion. In fact, the flux of such a size class can be computed theoretically (as $w \approx w_s$) and does not require any model simulations. This is, we agree, an important fact to consider. As a result, we have modified the text in section 4.2 to put our findings in perspective with aggregates sinking at much faster sinking rates.
+Including a ``large aggregate" size class sinking at 100m/day, for example, would not provide much more interesting information, in our opinion. In fact, the flux of such a size class can be computed theoretically (using $w \approx w_s$) and does not require any model simulations. We agree, however, that this is an important fact to consider. As a result, we have added a paragraph in section 4.2 to put our findings in perspective with aggregates sinking at much faster sinking rates.
 	
+\subsection*{Major point \#3}
  \textit{Finally, the analysis demonstrated in Figures 7 and 8 does not seem appropriate for gauging the contribution of small and large particles to export, and the role of remineralization. As far as I understand, the insets in these figures show the flux associated with each particle class at 25 days after the particle release, computed based on their abundance and velocity (advective plus sinking).\\}
  
  \rep{This is correct}
