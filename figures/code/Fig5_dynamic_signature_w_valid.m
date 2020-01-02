@@ -2,7 +2,7 @@ clear
 close all
 
 %% Load gradients computed from glider data for comparison curve
-load('/Users/mathieudever/Documents/EXPORTS/Data/station_Papa_glider/glider_non_gridded.mat')
+load('dataset/Fig5_data.mat')
 glider.M2time = datevec(glider.M2time);
 clearvars -except glider cmap
 
@@ -267,5 +267,5 @@ text(1.82,6.1,'Papa\_winter','fontsize',30,'HorizontalAlignment','center','Units
 
 cd(thefolder)
 set(gcf,'color','w')
-export_fig -r200 Fig5_dynamic_signature_w_valid.png
-close
+%export_fig -r200 Fig5_dynamic_signature_w_valid.png
+%close
