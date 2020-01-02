@@ -4,15 +4,18 @@ clear
 % DOY 25 in Summer/Winter for xi = 2 and xi = 4
 
 %% Import w for each size class in winter and summer
-tt = 25;
-[~,~,wt0025s] = importw('/Volumes/mdever/particlespeed/doy25/w0025mday_summer.csv');
-[~,~,wt1s] = importw('/Volumes/mdever/particlespeed/doy25/w1mday_summer.csv');
-[~,~,wt5s] = importw('/Volumes/mdever/particlespeed/doy25/w5mday_summer.csv');
-
-[~,~,wt0025w] = importw('/Volumes/mdever/particlespeed/doy25/w0025mday_winter.csv');
-[~,~,wt1w] = importw('/Volumes/mdever/particlespeed/doy25/w1mday_winter.csv');
-[~,~,wt5w] = importw('/Volumes/mdever/particlespeed/doy25/w5mday_winter.csv');
-
+% tt = 25;
+% [~,~,wt0025s] = importw('/Volumes/mdever/particlespeed/doy25/w0025mday_summer.csv');
+% [~,~,wt1s] = importw('/Volumes/mdever/particlespeed/doy25/w1mday_summer.csv');
+% [~,~,wt5s] = importw('/Volumes/mdever/particlespeed/doy25/w5mday_summer.csv');
+% 
+% [~,~,wt0025w] = importw('/Volumes/mdever/particlespeed/doy25/w0025mday_winter.csv');
+% [~,~,wt1w] = importw('/Volumes/mdever/particlespeed/doy25/w1mday_winter.csv');
+% [~,~,wt5w] = importw('/Volumes/mdever/particlespeed/doy25/w5mday_winter.csv');
+% 
+% save Fig7_data.mat
+% error('stop')
+load Fig7_data.mat
 %% Set colors for each class
 color0025 = [215,48,39]/256;
 color1 = [39,100,25]/256;
@@ -92,7 +95,10 @@ ylim([1e-2 100])
 title('Summer','fontsize',50,'position',[-6 11e+01 0]);
 text(-9.5,6e1,'(a)   \xi = 2','fontweight','b','fontsize',40)
 HH = legend([h1 h2 h3],'0.025 m/day','1 m/day','5 m/day','location','southeast');
-set(HH,'fontsize',25)
+set(HH,'fontsize',30,'linewidth',2)
+%[HH,icons,plots,txt] = legend([h1 h2 h3],'0.025 m/day','1 m/day','5 m/day','location','southeast');
+%set(plots,'linewidth',15)
+
 
 axes('position',[.36 .82 .15 .14])
 bar(1,sum(N0025s(E<=0).*B0025_2.*E(E<=0)/totalF*100),'facecolor',color0025,'edgecolor',color0025)
@@ -115,12 +121,11 @@ patch([E(E<=0) 0 min(E(E<=0)) min(E(E<=0))],[N1s(E<=0).*B1_4/totalB4*100 1e-2 1e
 patch([E(E<=0) 0 min(E(E<=0)) min(E(E<=0))],[N5s(E<=0).*B5_4/totalB4*100 1e-2 1e-2 N5s(1).*B5_4/totalB4*100],color5,'edgecolor','none','facealpha',.3)
 
 set(gca,'Yscale','log','FontSize',40)
-xlabel('w [m/day]')
+xlabel('w_t_o_t [m/day]')
 ylabel('Relative Biomass [%]')
 grid on; axis tight; xlim([-10 10])
 ylim([1e-2 100])
 text(-9.5,6e1,'(c)   \xi = 4','fontweight','b','fontsize',40)
-
 
 axes('position',[.36 .34 .15 .14])
 bar(1,sum(N0025s(E<=0).*B0025_4.*E(E<=0))/totalF4*100,'facecolor',color0025,'edgecolor',color0025)
@@ -131,7 +136,6 @@ set(gca,'YScale','log','fontsize',40,'xtick',[1:3],'XTickLabel',{},'yaxislocatio
 grid on; box on
 ylim([1e-2 100])
 title('Relative Downward Flux','fontsize',40,'position',[2 200 0])
-
 
 subplot(2,2,2)
 h1 = plot(Ew,N0025w.*B0025_2/totalBw*100,'-','color',color0025,'linewidth',2);
@@ -174,7 +178,7 @@ patch([Ew(Ew<=0) 0 min(Ew(Ew<=0)) min(Ew(Ew<=0))],[N1w(Ew<=0).*B1_4/totalB4w*100
 patch([Ew(Ew<=0) 0 min(Ew(Ew<=0)) min(Ew(Ew<=0))],[N5w(Ew<=0).*B5_4/totalB4w*100 1e-2 1e-2 N5w(1).*B5_4/totalB4w*100],color5,'edgecolor','none','facealpha',.3)
 
 set(gca,'Yscale','log','FontSize',40,'yticklabel',{})
-xlabel('w [m/day]')
+xlabel('w_t_o_t [m/day]')
 %ylabel('Relative Biomass [%]')
 grid on; axis tight; xlim([-150 150])
 ylim([1e-2 100])
