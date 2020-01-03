@@ -50,6 +50,11 @@ Response to reviewers\\}
 
 \section{Response to Editor's comments}
 
+Comments provided vby reviewer \#1 were very constructive and relevant. They lead to major changes in the manuscript, namely figure 7 and 8. It also led us to clarify some of the aspects of the manuscript, as the scientific reasoning behind some of the choices made (e.g., particle seeding depth). Most of the concerns rose by the reviewer were however related to the definition of an export horizon to quantify export. We argue, based on both our work and recent studies \citep{Palevsky_2018}, that the definition of an export horizon is not adequate and introduces subjectivity and biases in the results.
+
+
+
+
 \section{Comments from Reviewer  \#1}
 \subsection*{Major point \#1}
 \small
@@ -76,7 +81,7 @@ Based on this comment, the text has been modified in Section 2.2.2 to better jus
 The choice of 5m/day sinking rates as the ``face-sinking"  class is justified on lines 300-301 of the original manuscript. It is based on the PDFs of the advective vertical velocity. In our case, 5 m/day is faster than 85-90\% of the vertical velocity modeled in our domain at any given time. We have added some text in Section 2.2.2 to make the justification clearer to the reader.\\
 
 \textit{``Comparing the summer and winter simulations, it seems that small particles only dominate the export flux when vertical advective velocities exceed the large particle sinking velocity."\\}
-This is therefore not exact in this case. As mentioned, at any given time, between 10 and 15\% of the vertical velocity over the model domain is smaller than 5 m/day -- our fastest sinking rate -- and an even smaller percentage is sampled by the Lagrangian particles. If \textit{``vertical advective velocities exceed the large particle sinking velocity"}, it would be temporary and very rare.\\
+This is therefore not exact in this case. As mentioned, at any given time, between 10 and 15\% of the vertical velocity over the model domain is larger than 5 m/day -- our fastest sinking rate -- and an even smaller percentage is sampled by the Lagrangian particles. If \textit{``vertical advective velocities exceed the large particle sinking velocity"}, it is temporary and very rare.\\
 
 However, your comment is very relevant: What do our findings mean for sinking rates far exceeding the maximum modeled vertical velocities? In that case, $w \approx w_s$, as the sinking rate largely dominate. We want to know if the ratio of fluxes of two large sinking velocity is greater and smaller than one (i.e., the slope of the biomass flux spectrum is positive or negative):
 
@@ -89,12 +94,12 @@ Using Equation 8 in the main text, we obtain:
 	\frac{B_0\left(\frac{w_1}{w_0}\right)^{\frac{3-\xi}{2}}w_1}{B_0\left(\frac{w_2}{w_0}\right)^{\frac{3-\xi}{2}}w_2} &> 1\\[.2cm]
 	\left(\frac{w_2}{w_1}\right)^{\frac{5-\xi}{2}} &>1
 \end{align}	
-which is only true for $w_2 > w_1$ if $\xi<$5. In other words, if the Junge slope is larger than 5, the slope of the particle size, biomass, AND biomass flux is negative. While large, a value of $\xi>5$ is not unrealistic, as it falls within the range of $\xi$ obtained from satellite-based estimates \citep{Kostadinov_2009}.
+which is only true for $w_2 > w_1$ if $\xi<$5. In other words, if the Junge slope is larger than 5, the slopes of the particle size, biomass, AND biomass flux spectra are negative. While large, a value of $\xi>5$ is not unrealistic, as it falls within the range of $\xi$ obtained from satellite-based estimates \citep{Kostadinov_2009}.
 
-To directly address your comment, it is true that for very large aggregates with sinking rates far exceeding the order of magnitude of vertical velocities, the contribution of slower sinking particles is not dominant. We believe it to be well-established, and is the basis of the traditional 1-D model commonly used. Our study demonstrates the limitations of this paradigm, as one considers slower-sinking particles classes. Furthermore, for the largest aggregate to constantly be driving the biomass flux, it would require an infinite reservoir of those large particles to be able to relate their larger flux to larger export. The biomass flux due to the aggregates would be larger until the source is exhausted -- which is likely to happen more quickly for 100 m/day particles than for smaller particles. In fact, export from very fast sinking particles (e.g., 100 m /day) tend to occur as events \citep{Kiko_2017}.
+To directly address your comment, it is true that for very large aggregates with sinking rates far exceeding the order of magnitude of vertical velocities, the contribution of slower sinking particles is not dominant. We believe it to be well-established, and is the basis of the traditional 1-D model commonly used. Our study demonstrates the limitations of this paradigm, as one considers slower-sinking particles classes. Furthermore, for the largest aggregate to constantly be driving the biomass flux, it would require an infinite reservoir of those large particles to be able to relate their larger flux to larger export. The biomass flux due to the aggregates would be larger until the source is exhausted -- which is likely to happen more quickly for 100 m/day particles than for smaller particles. In fact, export from very fast sinking particles (e.g., 100 m /day) tend to occur as events and are not sustained in time \citep{Kiko_2017}.
 Additionally, this paradigm is only true if the slope of the particle-size spectrum is smaller than $\sim$5 (based on our scaling).
 
-Including a ``large aggregate" size class sinking at 100m/day, for example, would not provide much more interesting information, in our opinion. In fact, the flux of such a size class can be computed theoretically (using $w \approx w_s$) and does not require any model simulations. We agree, however, that this is an important fact to consider. As a result, we have added a paragraph in section 4.2 to put our findings in perspective with aggregates sinking at much faster sinking rates.
+Including a ``large aggregate" size class sinking at 100m/day, for example, would not provide much more interesting information, in our opinion. In fact, the flux of such a size class can be computed theoretically (using $w \approx w_s$) and does not require any model simulations. We agree, however, that this is an important fact to consider and discuss in the manuscript. As a result, we have added a paragraph in section 4.2 to put our findings in perspective with aggregates sinking at much faster sinking rates.
 	
 \subsection*{Major point \#3}
  \textit{Finally, the analysis demonstrated in Figures 7 and 8 does not seem appropriate for gauging the contribution of small and large particles to export, and the role of remineralization. As far as I understand, the insets in these figures show the flux associated with each particle class at 25 days after the particle release, computed based on their abundance and velocity (advective plus sinking).\\}
@@ -103,26 +108,27 @@ This is correct.\\
 
  \textit{But why is the flux at day 25 the important quantity? By this time, the large particles have had time to decay to a size where their sinking velocity is negligible, and therefore their contribution to the flux will be small.}
  
- This is a good point that is now addressed in the revised manuscript. Fig 7 and 8 are now displaying the PDF of biomass fluxes integrating over the entire particle tracking experiment (i.e. 28 days), to avoid confusion. Our conclusions are robust to whether the PDFs are displayed for a specific day, or for the entire simulation. The respective contributions of the different size classes vary little over the course of a simulation. We opted to show day 25 of simulation to simplify the interpretation of the PDFs; in fact, the impact of remineralization on the PDFs is not as clear in the time-integrated PDFs. We added some text along the new version of figures 7 and 8 to facilitate plot interpretation.
+ This is a good point that is now addressed in the revised manuscript. Fig 7 and 8 are now displaying the PDF of biomass fluxes integrated over the entire particle tracking experiment (i.e. 28 days), to avoid confusion. Our conclusions are robust to whether the PDFs are displayed for a specific day, or for the entire simulation. The respective contributions of the different size classes vary little over the course of a simulation. We opted to show day 25 of simulation to simplify the interpretation of the PDFs; in fact, the impact of remineralization on the PDFs is not as clear in the time-integrated PDFs. We added some text along the new version of figures 7 and 8 to facilitate plot interpretation.\\
  
- \textit{ But, what about all of the large particles that settled across the export horizon (100m) earlier in the simulation, while their sinking velocity is still high? Really, we should be interested in how much of the initial biomass in each size category has "escaped" through the export horizon by the end of the simulation, i.e. their time-integrated contribution to export.\\}
+ \textit{But, what about all of the large particles that settled across the export horizon (100m) earlier in the simulation, while their sinking velocity is still high? Really, we should be interested in how much of the initial biomass in each size category has "escaped" through the export horizon by the end of the simulation, i.e. their time-integrated contribution to export.\\}
  
-  For particles released at 80m, sinking at 5m/day and remineralizing at a rate of 0.13/day, it seems that at least 50\% of the inital biomass in the large size category must be exported through the 100m horizon, before remineralizing. In contrast, Figure 6 shows that only a very small fraction of the small particles reach 100m in winter, even when they are not remineralizing. It therefore seems that even in winter, large particles must dominate the integrated export flux in the simulation with remineralization, contradicting the second major conclusion of the study. I suggest the authors repeat their analysis, comparing time-integrated export through 100m in order to assess the contribution of large vs. small particles.\\}
+ As previously mentioned, the study focuses on export fluxes rather than export, to avoid introducing subjectivity in defining an export horizon.\\
+ 
+\textit{For particles released at 80m, sinking at 5m/day and remineralizing at a rate of 0.13/day, it seems that at least 50\% of the inital biomass in the large size category must be exported through the 100m horizon, before remineralizing. In contrast, Figure 6 shows that only a very small fraction of the small particles reach 100m in winter, even when they are not remineralizing. It therefore seems that even in winter, large particles must dominate the integrated export flux in the simulation with remineralization, contradicting the second major conclusion of the study.\\}
 
-As mentioned above, we aimed to not rely on a depth-horizon to present our results, mainly due to the subjectivity it involves (see \textbf{Major Point \#1}). %There is also another major operational complication when using a depth-horizon: In our study, particles are seeded once, 
- 
- 
-Addressing the first part of this comment, related to why Day 25 is used, 
+This is a good example of how defining an arbitrary export horizon can skew the results. If the export horizon was set to 90 m, then almost all of the 1m/day particles would be "exported", and they would therefore dominate export for $\xi=4$. If 100 m is used as an export horizon, this is no longer the case and the 5m/day class would dominate export. if 300 m was used, then there would be no export. A large flux of biomass, even over a limited vertical scale, has the potential to lead to a large export. This is why we focus on biomass fluxes as opposed to integrated biomass. Along with other reasons mentioned above (seeding strategy, operational limitations, etc).\\
 
-\note{This is a good point. For Fig 7, the timestamp selected to display the results has little impact on the conclusions. A similar plot was produced for time-average biomass fluxes, and the results are only marginally different \textbf{(plots included in this document)}. The results are therefore displayed for day 25 for consistency, as this is the day used to display results in Fig 8.\linebreak For fig 8... how to justify using doy 25? Should I make a Fig 9 with time series of \%...?}
+\textit{I suggest the authors repeat their analysis, comparing time-integrated export through 100m in order to assess the contribution of large vs. small particles.\\}
 
+This was the original direction that we took for this study. However, we came to realize that looking at time-integrated export introduces large complications, the main ones being: (1) It requires defining an export depth, and (2) The one-time particle seeding strategy becomes inappropriate. Constant reseeding becomes necessary, which is operationally constraining, (3) the timescales integrated over drives the result. If particles are tracked for an infinitely long time, they will eventually all be exported, and the dominant particle class is only a function of the Junge slope. If particles are tracked for long enough for one class to cross the export horizon, but not other classses (as it would be the case for a horizon defined a t100 m), then the export would artificially be driven by the fast sinking particles.
+
+\subsection*{Minor comments}
 \textit{Line 306: Is it three weeks, or 28 days (four weeks)?}\\
 \rep{Text has been modified accordingly.}
 \textit{Figure 7+8: It would be useful to point out either in the caption or axis label that the x axes are the vertical velocity combining both sinking and advective components, and that the velocity in the legends is the initial sinking velocity. This confused me for a few minutes.}\\
 \rep{Figure captions have been modified.}
 \textit{Acknowledgments: Will the model output be archived for public access?}\\
-\rep{Text has been modified accordingly.}
-\note{Create a subset dataset necessary to generate figures}
+\rep{Due to the very large amount of data necessary for this study, a subset of the data, equired to produce the figures, is publicly available (link is now included in acknowledgments). Full dataset is available on request.}
 
 \section{Comments from Reviewer  \#2}
 \rep{We would first like to thank this Reviewer for these very on-point and constructive reviews. They were very helpful to make the manuscript stronger!}
