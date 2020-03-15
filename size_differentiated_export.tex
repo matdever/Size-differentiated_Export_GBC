@@ -6,6 +6,8 @@
 
 % Trackchanges package
 \usepackage{trackchanges}
+\soulregister\ref7
+\soulregister\cite7
 %% PLEASE USE THE FOLLOWING COMMANDS
 %   \note[editor]{The note} 
 %   \annote[editor]{Text to annotate}{The note} 
@@ -317,8 +319,7 @@
 	\begin{figure}[t!]
 		\centering
 		\includegraphics[width = 1\linewidth]{Fig8_revised.png}
-		\caption{\change{Probability Distribution Function (PDF) of relative biomass versus total vertical velocity along particle trajectories in the summer case [left] and winter case [right], ignoring [top] and including [bottom] particle remineralization, for $\xi$ = 4 and 25 days after particle release. Inserts show the integrated relative downward biomass flux associated with each sinking-velocity class, categorized according to their initial sinking velocity. Remineralization processes have the greatest impact on fast-sinking particles, especially in summer dynamics.}{Same as Figure \ref{fig: biomass_export}, but including particle remineralization (see Equation \ref{eq: sinking_velocity_remin}).}
-		}	
+		\caption{\change{Probability Distribution Function (PDF) of relative biomass versus total vertical velocity along particle trajectories in the summer case [left] and winter case [right], ignoring [top] and including [bottom] particle remineralization, for $\xi$ = 4 and 25 days after particle release. Inserts show the integrated relative downward biomass flux associated with each sinking-velocity class, categorized according to their initial sinking velocity. Remineralization processes have the greatest impact on fast-sinking particles, especially in summer dynamics.}{Same as Figure \ref{fig: biomass_export}, but including particle remineralization (see Equation \ref{eq: sinking_velocity_remin}).}}	
 		\label{fig: biomass_export_remin}
 	\end{figure}
 	In a advectively-driven system where $\left<w_sB\right> \sim \left<wB\right>$, the relative amount of biomass content in a particle class becomes important and dictates the respective contribution of each particle class to the total downward biomass fluxes. This shift from a gravitationally-driven to an advectively-driven system is observed when implementing particle remineralization in the summer (Figure \ref{fig: biomass_export_remin}\remove{c}): in the absence of remineralization, faster-sinking particles dominate the downward biomass fluxes (\change{60}{53}\%; see Figure \ref{fig: biomass_export}c). When remineralization processes are considered, slower-sinking particles \change{become the dominant contributor}{contribute more} to biomass fluxes (see inset in Figure \ref{fig: biomass_export_remin}c). As shown in Figure \ref{fig: biomass_export}, downward biomass fluxes in the wintertime are generally advectively-driven, due to the larger vertical velocities associated with wintertime ocean dynamics. Biomass fluxes are dominated by the slower-sinking particles \add{when $\xi =4$}, representing 79\% of the downward biomass flux (Figure \ref{fig: biomass_export}d). Even after implementing the remineralization scheme, slower-sinking particles remain the largest contributor to downward biomass fluxes (82\%; see Figure \ref{fig: biomass_export_remin}d).

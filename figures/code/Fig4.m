@@ -52,8 +52,8 @@ figure(2)
 thew = [0.025 1 5];
 h1 = loglog(thew,[B0025_3 B1_3 B5_3]./sum([B0025_3 B1_3 B5_3])*100,'-k','linewidth',2);
 hold on
-h2 = loglog(thew,[B0025_2 B1_2 B5_2]./sum([B0025_2 B1_2 B5_2])*100,'--k','linewidth',2);
-h3 = loglog(thew,[B0025_4 B1_4 B5_4]./sum([B0025_4 B1_4 B5_4])*100,':k','linewidth',2);
+h2 = loglog(thew,[B0025_2 B1_2 B5_2]./sum([B0025_2 B1_2 B5_2])*100,':k','linewidth',2);
+h3 = loglog(thew,[B0025_4 B1_4 B5_4]./sum([B0025_4 B1_4 B5_4])*100,'--k','linewidth',2);
 
 
 scatter(thew,[B0025_3 B1_3 B5_3]./sum([B0025_3 B1_3 B5_3])*100,100,cat(1,color0025,color1,color5),'s','filled');

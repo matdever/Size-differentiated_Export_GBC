@@ -3,56 +3,61 @@ clear
 %% This code plot the model domain with the wind profile and the het flux 
 % meridoinal anomaly in 3 panels
 %%
-ii = 0;
-x = ncread(['/Volumes/garuda/Mathieu/output_Papa_Dx=500_from_1km/K1/full_',num2str(ii,'%05d'),'.cdf'],'xc')*1000;
-y = ncread(['/Volumes/garuda/Mathieu/output_Papa_Dx=500_from_1km/K1/full_',num2str(ii,'%05d'),'.cdf'],'yc')*1000;
-Z = ncread(['/Volumes/garuda/Mathieu/output_Papa_Dx=500_from_1km/K1/full_',num2str(ii,'%05d'),'.cdf'],'zc');
-z = squeeze(Z(1,1,:));
-rho = ncread(['/Volumes/garuda/Mathieu/output_Papa_Dx=500_from_1km/K1/full_',num2str(ii,'%05d'),'.cdf'],'rho');
-rho(1,:,:) = NaN; rho(end,:,:) = NaN;
-
-% Import the scale factor for restauration time scale
-filename = '/Volumes/garuda/Mathieu/output_Papa_Dx=500_from_1km/K1/scalefactor.out';
-delimiter = ','; startRow = 2; formatSpec = '%*s%s%[^\n\r]';
-fileID = fopen(filename,'r');
-dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter, 'TextType', 'string', 'HeaderLines' ,startRow-1, 'ReturnOnError', false, 'EndOfLine', '\r\n');
-fclose(fileID);
-raw = repmat({''},length(dataArray{1}),length(dataArray)-1);
-for col=1:length(dataArray)-1
-    raw(1:length(dataArray{col}),col) = mat2cell(dataArray{col}, ones(length(dataArray{col}), 1));
-end
-numericData = NaN(size(dataArray{1},1),size(dataArray,2));
-rawData = dataArray{1};
-for row=1:size(rawData, 1)
-    % Create a regular expression to detect and remove non-numeric prefixes and
-    % suffixes.
-    regexstr = '(?<prefix>.*?)(?<numbers>([-]*(\d+[\,]*)+[\.]{0,1}\d*[eEdD]{0,1}[-+]*\d*[i]{0,1})|([-]*(\d+[\,]*)*[\.]{1,1}\d+[eEdD]{0,1}[-+]*\d*[i]{0,1}))(?<suffix>.*)';
-    try
-        result = regexp(rawData(row), regexstr, 'names');
-        numbers = result.numbers;
-        
-        % Detected commas in non-thousand locations.
-        invalidThousandsSeparator = false;
-        if numbers.contains(',')
-            thousandsRegExp = '^\d+?(\,\d{3})*\.{0,1}\d*$';
-            if isempty(regexp(numbers, thousandsRegExp, 'once'))
-                numbers = NaN;
-                invalidThousandsSeparator = true;
-            end
-        end
-        % Convert numeric text to numbers.
-        if ~invalidThousandsSeparator
-            numbers = textscan(char(strrep(numbers, ',', '')), '%f');
-            numericData(row, 1) = numbers{1};
-            raw{row, 1} = numbers{1};
-        end
-    catch
-        raw{row, 1} = rawData{row};
-    end
-end
-scalefactor = cell2mat(raw(:, 1));
-clearvars filename delimiter startRow formatSpec fileID dataArray ans raw col numericData rawData row regexstr result numbers invalidThousandsSeparator thousandsRegExp;
-
+% ii = 0;
+% x = ncread(['/Volumes/mahadevanlab/mathieudever/PSOM_backup/PSOM_outputs/Papa_summer/full_',num2str(ii,'%05d'),'.cdf'],'xc')*1000;
+% y = ncread(['/Volumes/mahadevanlab/mathieudever/PSOM_backup/PSOM_outputs/Papa_summer/full_',num2str(ii,'%05d'),'.cdf'],'yc')*1000;
+% Z = ncread(['/Volumes/mahadevanlab/mathieudever/PSOM_backup/PSOM_outputs/Papa_summer/full_',num2str(ii,'%05d'),'.cdf'],'zc');
+% z = squeeze(Z(1,1,:));
+% rho = ncread(['/Volumes/mahadevanlab/mathieudever/PSOM_backup/PSOM_outputs/Papa_summer/full_',num2str(ii,'%05d'),'.cdf'],'rho');
+% rho(1,:,:) = NaN; rho(end,:,:) = NaN;
+% clear ii
+% 
+% % Import the scale factor for restauration time scale
+% filename = '/Volumes/mahadevanlab/mathieudever/PSOM_backup/PSOM_outputs/scalefactor.out';
+% delimiter = ','; startRow = 2; formatSpec = '%*s%s%[^\n\r]';
+% fileID = fopen(filename,'r');
+% dataArray = textscan(fileID, formatSpec, 'Delimiter', delimiter, 'TextType', 'string', 'HeaderLines' ,startRow-1, 'ReturnOnError', false, 'EndOfLine', '\r\n');
+% fclose(fileID);
+% raw = repmat({''},length(dataArray{1}),length(dataArray)-1);
+% for col=1:length(dataArray)-1
+%     raw(1:length(dataArray{col}),col) = mat2cell(dataArray{col}, ones(length(dataArray{col}), 1));
+% end
+% numericData = NaN(size(dataArray{1},1),size(dataArray,2));
+% rawData = dataArray{1};
+% for row=1:size(rawData, 1)
+%     % Create a regular expression to detect and remove non-numeric prefixes and
+%     % suffixes.
+%     regexstr = '(?<prefix>.*?)(?<numbers>([-]*(\d+[\,]*)+[\.]{0,1}\d*[eEdD]{0,1}[-+]*\d*[i]{0,1})|([-]*(\d+[\,]*)*[\.]{1,1}\d+[eEdD]{0,1}[-+]*\d*[i]{0,1}))(?<suffix>.*)';
+%     try
+%         result = regexp(rawData(row), regexstr, 'names');
+%         numbers = result.numbers;
+%         
+%         % Detected commas in non-thousand locations.
+%         invalidThousandsSeparator = false;
+%         if numbers.contains(',')
+%             thousandsRegExp = '^\d+?(\,\d{3})*\.{0,1}\d*$';
+%             if isempty(regexp(numbers, thousandsRegExp, 'once'))
+%                 numbers = NaN;
+%                 invalidThousandsSeparator = true;
+%             end
+%         end
+%         % Convert numeric text to numbers.
+%         if ~invalidThousandsSeparator
+%             numbers = textscan(char(strrep(numbers, ',', '')), '%f');
+%             numericData(row, 1) = numbers{1};
+%             raw{row, 1} = numbers{1};
+%         end
+%     catch
+%         raw{row, 1} = rawData{row};
+%     end
+% end
+% scalefactor = cell2mat(raw(:, 1));
+% clearvars filename delimiter startRow formatSpec fileID dataArray ans raw col numericData rawData row regexstr result numbers invalidThousandsSeparator thousandsRegExp;
+% 
+% save Fig1_data.mat
+%%
+clear
+load dataset/Fig1_data.mat
 
 figure
 pcolor(x/1000,y(2:end-1)/1000,repmat(scalefactor,1,length(x)));
@@ -94,4 +99,4 @@ ylabel('y [km]')
 
 
 set(gcf,'color','w')
-export_fig('Fig1_model_domain.png','-r200')
+%export_fig('Fig1_model_domain.png','-r200')
