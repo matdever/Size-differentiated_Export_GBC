@@ -11,6 +11,7 @@
 \usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{natbib}
+\usepackage{hyperref}
 
 \singlespacing
 
@@ -47,43 +48,47 @@
 Response to reviewers\\}
 \end{center}
 \small
-
+	
 \section{Response to Editor's comments}
 
-Comments provided by reviewer \#1 are constructive and relevant. They lead to major changes in the manuscript, namely figure 7 and 8. It also led us to clarify some of the aspects of the manuscript, as the scientific reasoning behind some of the choices made (e.g., particle seeding depth). Most of the concerns risen by the reviewer were, however, related to the definition of an export horizon to quantify export. We argue below that, based on both our work and recent studies \citep{Palevsky_2018}, the definition of an export horizon is not adequate and introduces subjectivity and biases in the results.
+Comments provided by both reviewers are constructive, relevant, and thus greatly appreciated. We are grateful to those two reviewers for providing helpful comments that improved the clarity of the study.\\
 
+Their comments led to major changes in the manuscript, namely figure 7 and 8. It also led us to clarify some of the aspects of the manuscript, such as the scientific reasoning behind some of the choices made (e.g., particle seeding depth). Most of the concerns risen by the reviewer were, however, related to either the definition of an export horizon to quantify export, or the range of sinking speeds selected for the study. We argue below that (1) based on both our work and recent studies \citep{Palevsky_2018}, the definition of an export horizon is not adequate and introduces subjectivity and biases in the results, and (2) the relevant range of sinking rates is scaled to the dynamics of the region. The absolute values are not so much what is important, but rather the relative importance to vertical currents. In a more energetic region than the northeast Pacific, the range of particle sinking speeds would be wider and reach sinking rates of O(100 m/day), but would lead to similar results than the ones detailed in this study.\\
 
-
+These two important points were clarified in several part of the revised manuscript.
 
 \section{Comments from Reviewer  \#1}
 \subsection*{Major point \#1}
 \small
 \textit{First, it is not clear why the authors have chosen to release particles only at the base of the euphotic zone between 75-85, which is within 20m of the horizon defined as the export depth (100m). In fact, particles are produced throughout the entire euphotic zone, and the production rate (i.e. NPP) is generally highest within the first 10-20m where light is ample. Distributing the particles through the euphotic zone in this way would almost certainly diminish the contribution of small particles to export, as they would spend significantly longer remineralizing within the mixed layer before passing the export horizon. I suggest a new simulation with particles initially distributed between 0-80m, or a clearer reasoning for selecting 75-85m as the release depth.\\}
 
-
-We carefully considered this question during our study. We deliberately  did not rely on a ``export depth horizon" due to the facts that it is not consistently defined in the literature, and that recent work questions the validity of selecting a depth horizon as an ``export depth", arguing for a dynamics-based definition \citep{Palevsky_2018}. This is one of the reasons why the conclusions focus on export fluxes, rather than export, as the latter would require defining a possibly controversial export horizon.\\
-			
-Additionally, the base of the euphotic zone is preferred in our study for three main reasons: 
+{\color{blue}
+We carefully considered this question during our study. The base of the euphotic zone is preferred in our study for three main reasons: 
 			\begin{enumerate}
-				\item A series of non-trivia important transformations occur in the euphotic zone \citep[e.g., grazing, material packaging, and many others; see][for example]{Denman_1999} that are not captured in our idealized setup, and are far beyond the scope of our study. By seeding particles at the base of the euphotic layer, we focus on the particulate material available to export, where remineralization and sinking are the dominant processes driving vertical fluxes (other than possibly advection, as demonstrated in this study). 
+				\item A series of non-trivia important transformations occur in the euphotic zone \citep[e.g., grazing, material packaging, and many others; see][for example]{Denman_1999} that are not captured in our idealized setup, and are far beyond the scope of our study. By seeding particles at the base of the euphotic layer, we focus on the particulate material available to export, where remineralization and sinking are the dominant processes driving vertical fluxes (other than possibly advection, as demonstrated in this study).
+				\item Seeding over 80 m instead of 10 m would require 8 times as many particles, as it is important to preserve particle density to adequately capture the physical dynamics at small scale (i.e., if particle seeding is too sparse, the presence of submesoscale dynamics would have little impact as no particles would be advected through these features). This would bring the total amount of particles tracked from $\sim$6 millions to $\sim$48 millions, largely limiting the number of experiments we could conduct in a reasonable time frame, but more importantly would not provide any more insights to the study (see point \#1).
 				\item The main results are expressed in terms of vertical fluxes. Vertical fluxes of particulate matter within the ML are not necessarily relevant to particle export, for the reasons detailed above. Including fluxes in the ML would introduce a bias into our results that is not relevant to our objectives.
-				\item Seeding over 80 m instead of 10 m would require 8 times as many particles, as it is important to preserve particle density to adequately capture the physical dynamics at small scale (i.e., if particle seeding is too sparse, the presence of submesoscale dynamics would have little impact as no particles would be advected through these features). This would bring the total amount of particles tracked from $\sim$6 millions to $\sim$48 millions, largely limiting the number of experiments we could conduct in a reasonable time frame.
 			\end{enumerate}
+
+Additionally, we deliberately did not rely on a ``export depth horizon" due to the facts that it is not consistently defined in the literature, and that recent work questions the validity of selecting a depth horizon as an ``export depth", arguing for a dynamics-based definition \citep{Palevsky_2018}. This is one of the reasons why the conclusions focus on export fluxes, rather than export, as the latter would require defining a possibly controversial export horizon.\\
 
 Finally, the small particles released at the base of the euphotic layer do not aim to represent small particles at the time of particle production. It can also represent larger particles at production that went through remineralization in the ML.
 
-Based on this comment, the text has been modified in Section 2.2.2 to better justify the choices outlined above.\\
+Based on this comment, the text has been modified in Section 2.2.2 to better justify the choices outlined above.\\}
 
 \subsection*{Major point \#2}
 \textit{Second, it is unclear why 5m/day is selected for the largest particle class. Studies using Underwater Vision Profilers reveal that a large portion of the particle flux is contributed by large aggregates of 0.1-5mm, which can have sinking speeds above 100m/day (see Guidi et al. 2008, Kiko et al. 2017). Comparing the summer and winter simulations, it seems that small particles only dominate the export flux when vertical advective velocities exceed the large particle sinking velocity. This condition would not be met if an aggregate particle class with sinking velocity of 100m/day were included. I suggest the inclusion of an additional "large aggregate" size class with appropriate sinking speed.\\}
 
 \textit{``it is unclear why 5m/day is selected for the largest particle class."\\}
-The choice of 5m/day sinking rates as the ``fast-sinking"  class is justified on lines 300-301 of the original manuscript. It is based on the PDFs of the advective vertical velocity. In our case, 5 m/day is faster than 85-90\% of the vertical velocity modeled in our domain at any given time. We have added some text in Section 2.2.2 to make the justification clearer to the reader.\\
+{\color{blue}
+	The choice of 5m/day sinking rates as the ``fast-sinking"  class is justified on lines 300-301 of the original manuscript. It is based on the PDFs of the advective vertical velocity. In our case, 5 m/day is faster than 85-90\% of the vertical velocity modeled in our domain at any given time. We have added some text in Section 2.2.2 to make the justification clearer to the reader.\\}
 
 \textit{``Comparing the summer and winter simulations, it seems that small particles only dominate the export flux when vertical advective velocities exceed the large particle sinking velocity."\\}
-This is therefore not exact in this case. As mentioned, at any given time, between 10 and 15\% of the vertical velocity over the model domain is larger than 5 m/day -- our fastest sinking rate -- and an even smaller percentage is sampled by the Lagrangian particles. If \textit{``vertical advective velocities exceed the large particle sinking velocity"}, it is rare and short-lived.\\
+{\color{blue}
+	This is therefore not exact in this case. As mentioned, at any given time, between 10 and 15\% of the vertical velocity over the model domain is larger than 5 m/day -- our fastest sinking rate -- and an even smaller percentage is sampled by the Lagrangian particles. If  }\textit{``vertical advective velocities exceed the large particle sinking velocity"}{\color{blue}, it is rare and short-lived.\\}
 
-However, your comment is very relevant: What do our findings mean for sinking rates far exceeding the maximum modeled vertical velocities? In that case, $w \approx w_s$, as the sinking rate largely dominate. We want to know if the ratio of fluxes of two large sinking velocity is greater and smaller than one (i.e., the slope of the biomass flux spectrum is positive or negative):
+{\color{blue}
+	However, your comment is very relevant: What do our findings mean for sinking rates far exceeding the maximum modeled vertical velocities? In that case, $w \approx w_s$, as the sinking rate largely dominate. We want to know if the ratio of fluxes of two large sinking velocity is greater and smaller than one (i.e., the slope of the biomass flux spectrum is positive or negative):
 
 \begin{equation}
 	\frac{B_2w_2}{B_1w_1} >1 \quad \text{with} \quad w_2 > w_1
@@ -99,82 +104,98 @@ which is only true for $w_2 > w_1$ if $\xi<$5. In other words, if the Junge slop
 To directly address your comment, it is true that for very large aggregates with sinking rates far exceeding the order of magnitude of vertical velocities, the contribution of slower sinking particles is not dominant. We believe it to be well-established, and is the basis of the traditional 1-D model commonly used. Our study demonstrates the limitations of this paradigm, as one considers slower-sinking particles classes. Furthermore, for the largest aggregate to constantly be driving the biomass flux, it would require an infinite reservoir of those large particles to be able to relate their larger flux to larger export. The biomass flux due to the aggregates would be larger until the source is exhausted -- which is likely to happen more quickly for 100 m/day particles than for smaller particles. In fact, export from very fast sinking particles (e.g., 100 m /day) tend to occur as events and are not sustained in time \citep{Kiko_2017}.
 Additionally, this paradigm is only true if the slope of the particle-size spectrum is smaller than $\sim$5 (based on our scaling).
 
-Including a ``large aggregate" size class sinking at 100m/day, for example, would not provide much more interesting information, in our opinion. In fact, the flux of such a size class can be computed theoretically (using $w \approx w_s$) and does not require any model simulations. We agree, however, that this is an important fact to consider and discuss in the manuscript. As a result, we have added a paragraph in section 4.2 to put our findings in perspective with aggregates sinking at much faster sinking rates.
+Including a ``large aggregate" size class sinking at 100m/day, for example, would not provide much more interesting information, in our opinion. In fact, the flux of such a size class can be computed theoretically (using $w \approx w_s$) and does not require any model simulations. We agree, however, that this is an important fact to consider and discuss in the manuscript. As a result, we have added a paragraph in section 4.2 to put our findings in perspective with aggregates sinking at much faster sinking rates.}
 	
 \subsection*{Major point \#3}
  \textit{Finally, the analysis demonstrated in Figures 7 and 8 does not seem appropriate for gauging the contribution of small and large particles to export, and the role of remineralization. As far as I understand, the insets in these figures show the flux associated with each particle class at 25 days after the particle release, computed based on their abundance and velocity (advective plus sinking).\\}
  
-This is correct.\\
+ {\color{red}
+This is correct.\\}
 
  \textit{But why is the flux at day 25 the important quantity? By this time, the large particles have had time to decay to a size where their sinking velocity is negligible, and therefore their contribution to the flux will be small.}
  
- This is a good point that is now addressed in the revised manuscript. Fig 7 and 8 are now displaying the PDF of biomass fluxes integrated over the entire particle tracking experiment (i.e. 28 days), to avoid confusion. Our conclusions are robust to whether the PDFs are displayed for a specific day, or for the entire simulation. The respective contributions of the different size classes vary little over the course of a simulation. We opted to show day 25 of simulation to simplify the interpretation of the PDFs; in fact, the impact of remineralization on the PDFs is not as clear in the time-integrated PDFs. We added some text along the new version of figures 7 and 8 to facilitate plot interpretation.\\
+ {\color{blue}
+ This is a good point, that is now addressed in the revised manuscript. Fig 7 and 8 are now displaying the PDF of biomass fluxes integrated over the entire particle tracking experiment (i.e. 28 days), to avoid confusion. Our conclusions are robust to whether the PDFs are displayed for a specific day, or for the entire simulation. The respective contributions of the different size classes vary little over the course of a simulation. We opted to show day 25 of simulation to simplify the interpretation of the PDFs; in fact, the impact of remineralization on the PDFs is not as clear in the time-integrated PDFs. We added some text along the new version of figures 7 and 8 to facilitate plot interpretation.\\}
  
- \textit{But, what about all of the large particles that settled across the export horizon (100m) earlier in the simulation, while their sinking velocity is still high? Really, we should be interested in how much of the initial biomass in each size category has "escaped" through the export horizon by the end of the simulation, i.e. their time-integrated contribution to export.\\}
+ \textit{But, what about all of the large particles that settled across the export horizon (100m) earlier in the simulation, while their sinking velocity is still high? Really, we should be interested in how much of the initial biomass in each size category has "escaped" through the export horizon by the end of the simulation, i.e. their time-integrated contribution to export.}
  
- As previously mentioned, the study focuses on export fluxes rather than export, to avoid introducing subjectivity in defining an export horizon.\\
+ {\color{blue}
+ As previously mentioned, the study focuses on export fluxes rather than export, to avoid introducing subjectivity in defining an export horizon.\\}
  
-\textit{For particles released at 80m, sinking at 5m/day and remineralizing at a rate of 0.13/day, it seems that at least 50\% of the inital biomass in the large size category must be exported through the 100m horizon, before remineralizing. In contrast, Figure 6 shows that only a very small fraction of the small particles reach 100m in winter, even when they are not remineralizing. It therefore seems that even in winter, large particles must dominate the integrated export flux in the simulation with remineralization, contradicting the second major conclusion of the study.\\}
+\textit{For particles released at 80m, sinking at 5m/day and remineralizing at a rate of 0.13/day, it seems that at least 50\% of the inital biomass in the large size category must be exported through the 100m horizon, before remineralizing. In contrast, Figure 6 shows that only a very small fraction of the small particles reach 100m in winter, even when they are not remineralizing. It therefore seems that even in winter, large particles must dominate the integrated export flux in the simulation with remineralization, contradicting the second major conclusion of the study.}
 
-This is a good example of how defining an arbitrary export horizon can skew the results. If the export horizon was set to 90 m, then almost all of the 1m/day particles would be "exported", and they would therefore dominate export for $\xi=4$. If 100 m is used as an export horizon, this is no longer the case and the 5m/day class would dominate export. if 300 m was used, then there would be no export. A large flux of biomass, even over a limited vertical scale, has the potential to lead to a large export. This is why we focus on biomass fluxes as opposed to integrated biomass. Along with other reasons mentioned above (seeding strategy, operational limitations, etc).\\
+{\color{blue}
+	This is a good example of how defining an arbitrary export horizon can skew the results. If the export horizon was set to 90 m, then almost all of the 1m/day particles would be "exported", and they would therefore dominate export for $\xi=4$. If 100 m is used as an export horizon, this is no longer the case and the 5m/day class would dominate export. if 300 m was used, then there would be no export. A large flux of biomass, even over a limited vertical scale, has the potential to lead to a large export. This is why we focus on biomass fluxes as opposed to integrated biomass. Along with other reasons mentioned above (seeding strategy, operational limitations, etc).\\}
 
-\textit{I suggest the authors repeat their analysis, comparing time-integrated export through 100m in order to assess the contribution of large vs. small particles.\\}
+\textit{I suggest the authors repeat their analysis, comparing time-integrated export through 100m in order to assess the contribution of large vs. small particles.}
 
-This was the original direction that we took for this study. However, we came to realize that looking at time-integrated export introduces large complications, the main ones being: (1) It requires defining an export depth, and (2) The one-time particle seeding strategy becomes inappropriate. Constant reseeding becomes necessary, which is operationally constraining, (3) the timescales integrated over drive the results. If particles are tracked for an infinitely long time, they will eventually all be exported, and the dominant particle class is only a function of the Junge slope. If particles are tracked for long enough for one class to cross the export horizon, but not other classes (as it would be the case for a horizon defined at 100 m), then the export would artificially be driven by the fast sinking particles.
+{\color{blue}
+This was the original direction that we took for this study. However, we came to realize that looking at time-integrated export introduces large complications, the main ones being: (1) It requires defining an export depth, and (2) The one-time particle seeding strategy becomes inappropriate. Constant reseeding becomes necessary, which is operationally constraining, (3) the timescales integrated over drive the results. If particles are tracked for an infinitely long time, they will eventually all be exported, and the dominant particle class is only a function of the Junge slope. If particles are tracked for long enough for one class to cross the export horizon, but not other classes (as it would be the case for a horizon defined at 100 m), then the export would artificially be driven by the fast sinking particles.}
 
 \subsection*{Minor comments}
-\textit{Line 306: Is it three weeks, or 28 days (four weeks)?}\\
-\rep{Text has been modified accordingly.}
-\textit{Figure 7+8: It would be useful to point out either in the caption or axis label that the x axes are the vertical velocity combining both sinking and advective components, and that the velocity in the legends is the initial sinking velocity. This confused me for a few minutes.}\\
-\rep{Figure captions have been modified.}
+\textit{Line 306: Is it three weeks, or 28 days (four weeks)?}
+
+{\color{blue}Text has been modified accordingly.\\}
+
+\textit{Figure 7+8: It would be useful to point out either in the caption or axis label that the x axes are the vertical velocity combining both sinking and advective components, and that the velocity in the legends is the initial sinking velocity. This confused me for a few minutes.}
+
+{\color{blue}Figure captions have been modified.\\}
+
 \textit{Acknowledgments: Will the model output be archived for public access?}\\
-\rep{Due to the very large amount of data necessary for this study, a subset of the data, equired to produce the figures, is publicly available (link is now included in acknowledgments). Full dataset is available on request.}
+{\color{red}Due to the very large amount of data necessary for this study ($>$ 1 TB), it is not possible to store the data online. To remediate this issue, the source code used to conduct the physical model simulation is made publicly available on GitHub (\url{https://github.com/PSOM/V1.0/tree/master/code/NP_summer} and \url{https://github.com/PSOM/V1.0/tree/master/code/NP_winter}).
+	The source code for particle tracking experiments is also available online \url{https://github.com/matdever/offline_particle_tracking}. Finally, the routines used to extract the relevant data and produce the figures is available HERE. This information is provided in the ACKNOWLEDGMENTS}
 
 \section{Comments from Reviewer  \#2}
-\rep{We would first like to thank this Reviewer for these very on-point and constructive reviews. They were very helpful to make the manuscript stronger!}
 
 \section*{Range of sinking speeds.}
-\textit{The sinking speed examined by the authors are 0.025, 0.05, 1 and 5 m/d. All these values would be considered as "slow sinking rate" by the community. Yet, the manuscript concludes on the relative contribution of slow and fast sinking particles, which is misleading. It also means that the authors cannot really conclude about the relative role of particles that have sinking rates similar in magnitude or faster than submesoscale motions (i.e. 50-300 m/d).\\}
+\textit{The sinking speed examined by the authors are 0.025, 0.05, 1 and 5 m/d. All these values would be considered as "slow sinking rate" by the community. Yet, the manuscript concludes on the relative contribution of slow and fast sinking particles, which is misleading. It also means that the authors cannot really conclude about the relative role of particles that have sinking rates similar in magnitude or faster than submesoscale motions (i.e. 50-300 m/d).}
 
-The three sinking rates were defined based on having one class virtually non-sinking (0.025 m/day), one class within the range of $w$ modeled (1 m/day), and one class larger than $w$ modeled at submesoscale in the winter case (5 m/day). In fact, at any given time, at least 85\% of the modeled vertical velocity is smaller than 5 m/day -- our fastest sinking rate -- and an even larger percentage is sampled by the Lagrangian particles. For all intents and purposes, a 5 m/day sinking particle is ``fast" compared to the dynamical flow of the simulations. Any particle class with a faster sinking rate would behave in a predictable way, as vertical velocity is dominated by sinking. We modified the text in Section 2.2.2 to clarify this (Line 304 - 307).\\
+{\color{blue}
+	The three sinking rates were defined based on having one class virtually non-sinking (0.025 m/day), one class within the range of $w$ modeled (1 m/day), and one class larger than $w$ modeled at submesoscale in the winter case (5 m/day). In fact, at any given time, at least 85\% of the modeled vertical velocity is smaller than 5 m/day -- our fastest sinking rate -- and an even larger percentage is sampled by the Lagrangian particles. For all intents and purposes, a 5 m/day sinking particle is ``fast" compared to the dynamical flow of the simulations. Any particle class with a faster sinking rate would behave in a predictable way, as vertical velocity is dominated by sinking. We modified the text in Section 2.2.2 to clarify this (Line 304 - 307).\\
 
-Considering a sinking rate much faster than 5 m/day would bring us back to the traditional 1D model, as the sinking rate would greatly dominate the vertical flux. The objective of the study is to capture that transitional part of the size spectrum. Station Papa remains a relatively calm region, so submesoscale $w$ are of the order of 10 m/day at most. Other regions with stronger vorticity would have $w$ of the order of magnitude you suggest ($\sim$ 100 m/day) and would affect a greater part of the particle size spectrum.\\
 
-To ensure that this is clearer in the manuscript, the text has been modified in the introduction and in the second paragraph of section 2.2.2.\\
+	Considering a sinking rate much faster than 5 m/day would bring us back to the traditional 1D model, as the sinking rate would greatly dominate the vertical flux. The objective of the study is to capture that transitional part of the size spectrum. Station Papa remains a relatively calm region, so submesoscale $w$ are of the order of 10 m/day at most. Other regions with stronger vorticity would have $w$ of the order of magnitude you suggest ($\sim$ 100 m/day) and would affect a greater part of the particle size spectrum.\\
 
-\textit{Throughout the text, the authors should be very clear about what they call fast and slow sinking particles. They should also compare the values they use to existing observations of rates. I recommend to see Baker et al 2017 or Riley et al 2016 for example who present in-situ observations of sinking speed and define slow $<$ 20 m/d and fast $>$ 20 m/d. Also note that this nomenclature is consistent with the rates used in ocean biogeochemical models, which usually have a fast sinking rate of 50-200 m/d, and sometimes an additional pool with slow sinking rate of 1-5 m/d.\\}
+To ensure that this is clearer in the manuscript, the text has been modified in the introduction and in the second paragraph of section 2.2.2.\\}
 
-We trust that this is now clearer in the manuscript, with the characterization into "slow" and "fast" not being based on the absolute value of the sinking rates, but rather on the ratio with the vertical currents present in the the study region. The text has been modified to improve clarity in both the introduction and section 2.2.2.\\
+\textit{Throughout the text, the authors should be very clear about what they call fast and slow sinking particles. They should also compare the values they use to existing observations of rates. I recommend to see Baker et al 2017 or Riley et al 2016 for example who present in-situ observations of sinking speed and define slow $<$ 20 m/d and fast $>$ 20 m/d. Also note that this nomenclature is consistent with the rates used in ocean biogeochemical models, which usually have a fast sinking rate of 50-200 m/d, and sometimes an additional pool with slow sinking rate of 1-5 m/d.}
+
+{\color{blue}
+	We trust that this is now clearer in the manuscript, with the characterization into "slow" and "fast" not being based on the absolute value of the sinking rates, but rather on the ratio with the vertical currents present in the the study region (see comments above). The text has been modified to improve clarity in both the introduction and section 2.2.2.\\}
 	
-\textit{The authors need to justify their choice, discuss the implications of this choice and explain how it informs the current view of the community on POC export. The authors should justify the narrow range of vertical velocity they explore. Prior observation-based studies emphasize the importance of particles sinking at slow rates ($<$ 10 m/d) but also those sinking at very fast rates similar in magnitude to submesoscale vertical motions (200-300 m/d) (e.g. Baker et al 2017, Riley et al 2016, Stuckel et al. 2017b). What are the reasons to look at only very slow sinking particles? Is it because of limitations related to the Stokes Law? Is it because the model is not adapted to look at faster sinking rates?\\}
+\textit{The authors need to justify their choice, discuss the implications of this choice and explain how it informs the current view of the community on POC export. The authors should justify the narrow range of vertical velocity they explore. Prior observation-based studies emphasize the importance of particles sinking at slow rates ($<$ 10 m/d) but also those sinking at very fast rates similar in magnitude to submesoscale vertical motions (200-300 m/d) (e.g. Baker et al 2017, Riley et al 2016, Stuckel et al. 2017b). What are the reasons to look at only very slow sinking particles? Is it because of limitations related to the Stokes Law? Is it because the model is not adapted to look at faster sinking rates?}
 
-There are no analytic limitations in exploring the faster-sinking part of the particle sinking velocity spectrum. As outlined above, the choice of sinking rates is based on the dynamics of the region studied. Any other regions with stronger vertical motions at submesoscales could be explored with faster sinking particles. We believe the overarching conclusion would be the same: The 1D traditional paradigm fails to capture export for particles with sinking rates similar or smaller than the vertical velocity, especially when the spectrum slope is steeper. At Station Papa, this affects the range of particles sinking at $<$ 5 m/day, but in a place where relative vorticity is larger (e.g., gulf stream), and vertical velocities can reach the order of 100 m/day, then the range of particle size for which the 1D model fails would be greater. All of our results are put in perspective of the ratio between advective and sinking rates, which makes them applicable to other regions of the ocean. We have addressed this point even further in our response to another comment above (Major point \#2 of reviewer \#1), which led to additional text in the discussion section.\\
+{\color{blue}
+	There are no analytic limitations in exploring the faster-sinking part of the particle sinking velocity spectrum. As outlined above, the choice of sinking rates is based on the dynamics of the region studied. Any other regions with stronger vertical motions at submesoscales could be explored with faster sinking particles. We believe the overarching conclusion would be the same: The 1D traditional paradigm fails to capture export for particles with sinking rates similar or smaller than the vertical velocity, especially when the spectrum slope is steeper. At Station Papa, this affects the range of particles sinking at $<$ 5 m/day, but in a place where relative vorticity is larger (e.g., gulf stream), and vertical velocities can reach the order of 100 m/day, then the range of particle size for which the 1D model fails would be greater. All of our results are put in perspective of the ratio between advective and sinking rates, which makes them applicable to other regions of the ocean. We have addressed this point even further in our response to another comment above (Major point \#2 of reviewer \#1), which led to additional text in the discussion section.\\}
 
 \textit{By limiting their study to slow sinking particles, the authors target by design the particles that will be most sensitive to submesoscale dynamics (see Stukel et al) and exclude particles that sink with rates similar or faster than submesoscale motions and that can efficiently export at depth and participate to carbon sequestration. Indeed, submesoscale is largely trapped in the upper ocean and only have a limited impact on export at greater depth (see previous discussions of these effects in Stukel et al, Erikson et al and Resplandy et al). The authors should acknowledge these limitations and discuss their implications.\\}
 
 \note{That is also a good point. $w$ are strogner in ML, but we have little particles in the ML, so our fluxes are mostly based on velocities below the ML. Submesoscale-driven subduction have been shown to leak below the ML (cite Sanjiv's paper, and the one from Ruiz and Pascual recently published?). BTW: Resplandy and al does not resolve submesoscale. They say it explicitely in the paper that the spectrum of vertical velocity suggest they resolve scales at 10 km and larger. Same for Stukel and Erikson - scales are O(10 km), not subkilometer.}\\
 
-\textit{The author could introduce the study by acknowledging up front that slow sinking particles are the particles most impacted by submesoscale (as shown in previous papers) and this is why they are the focus of this paper that explores the sensitivity to size spectrum etc.\\}
+\textit{The author could introduce the study by acknowledging up front that slow sinking particles are the particles most impacted by submesoscale (as shown in previous papers) and this is why they are the focus of this paper that explores the sensitivity to size spectrum etc.}
 
-This is a good point. We trust that the modifications made to the introduction now reflect this key aspect of the paper. The point is reiterated in Section 2.2.2 as well.
+{\color{blue}
+	This is a good point. We trust that the modifications made to the introduction now reflect this key aspect of the paper. The point is reiterated in Section 2.2.2 as well.}
 
 
 \section*{Remineralization and slower sinking particle contribution.}
-\textit{The choice of some parameter appears arbitrary. I like the fact that the authors sweep the parameter space of the size spectrum ($\xi$ = 2, 3, 4). The choice of this parameter is however key in the conclusion that are drawn (contribution of slower-sinking particles , L557-558).\\}
+\textit{The choice of some parameter appears arbitrary. I like the fact that the authors sweep the parameter space of the size spectrum ($\xi$ = 2, 3, 4). The choice of this parameter is however key in the conclusion that are drawn (contribution of slower-sinking particles , L557-558).}
 
-This parameter range is based on observational evidence cited in the text (L640), although not explicitly in section 2.2.3., where it would be most informative. We have modified the text in section 2.2.3 to better justify the range of $\xi$ used in this study. there is also a few sentences in Section 4.2 putting these values of the slope into perspective, explaining that the exact value is a result of our approximations, but that the conclusion of the importance of constraining that slope remains valid, as the threshold is likely within the range of observed values for $\xi$.\\
+{\color{blue}
+	This parameter range is based on observational evidence cited in the text (L640), although not explicitly in section 2.2.3., where it would be most informative. We have modified the text in section 2.2.3 to better justify the range of $\xi$ used in this study. there is also a few sentences in Section 4.2 putting these values of the slope into perspective, explaining that the exact value is a result of our approximations, but that the conclusion of the importance of constraining that slope remains valid, as the threshold is likely within the range of observed values for $\xi$.\\}
 
-\textit{Could you please present the case where the biomass spectrum slope is positive? Same as Figure 8 but with ξ = 2 and contrast it with the case of $\xi$ = 4?\\}
+\textit{Could you please present the case where the biomass spectrum slope is positive? Same as Figure 8 but with $\xi$ = 2 and contrast it with the case of $\xi$ = 4?\\}
 
-\note{How to address that? not much to gain from putting those results in...\\}
+\note{Include the figure for the reviewer}
 
-\textit{The authors briefly mention that slopes greater than 3 have been observed (L640). Could this discussion be augmented? What observational constraints do we have on the spectrum slope? Do we know if the biomass spectrum slope is positive or negative? Is it likely to change sign with season, biomes, looming conditions etc.? (not necessarily around station PAPA). Bridging your modeling results with available observations would greatly benefit the paper and facilitate the use of your conclusions by the community (please look into prior work to make these links). I strongly encourage you to discuss the implications of this result, what they mean for people measuring particles and export, what they should be looking for in the field?\\}
+\textit{The authors briefly mention that slopes greater than 3 have been observed (L640). Could this discussion be augmented? What observational constraints do we have on the spectrum slope? Do we know if the biomass spectrum slope is positive or negative? Is it likely to change sign with season, biomes, looming conditions etc.? (not necessarily around station PAPA). Bridging your modeling results with available observations would greatly benefit the paper and facilitate the use of your conclusions by the community (please look into prior work to make these links). I strongly encourage you to discuss the implications of this result, what they mean for people measuring particles and export, what they should be looking for in the field?}
 
-We have modified the text in the discussion section to discuss the implications of a steeper slope in a greater context. It now includes information about sources of observational evidence for steeper spectral slopes and the expected spatio-temporal variability.\\
+{\color{blue}
+	We have modified the text in the discussion section to discuss the implications of a steeper slope in a greater context. It now includes information about sources of observational evidence for steeper spectral slopes and the expected spatio-temporal variability.\\}
 	
-\textit{The effect of negative vs positive biomass spectrum slope is translated in your abstract by the rather vague "under specific conditions ..." (L27). Please try to clarify what this means in Layman terms in the abstract.\\
-}
-\rep{Text has been modified to address this comment.\\}	
+\textit{The effect of negative vs positive biomass spectrum slope is translated in your abstract by the rather vague "under specific conditions ..." (L27). Please try to clarify what this means in Layman terms in the abstract.}
+
+{\color{blue}Text has been modified to address this comment.\\}	
 
 \textit{How do your results depend on the remineralization (0.13 d-1) length-scale? \\}
 
@@ -183,6 +204,7 @@ We have modified the text in the discussion section to discuss the implications 
 \section*{Literature Survey and Discussion}
 It is very concerning that the authors are missing key recent papers published on the subject, including observation-based papers that should be discussed with the author's modeling results. Please find below a list of relevant papers that should be included in introduction and/or discussion. This list is absolutely not exhaustive. 
 
+{\color{red} Thank you for pointing out some of the studies we missed... }
 
 
 \section*{The introduction lacks some coherence. The different paragraphs are not clearly connected and the flow is rather tedious. It needs streamlining. }
@@ -195,11 +217,13 @@ It is very concerning that the authors are missing key recent papers published o
 	\item	Paragraphs 8 and 7 should be merged with paragraph 7. I suggest to present what the aim of the study is (some of paragraph 8) before mentioning the processes that your model does not resolve (e.g. surface wave in paragraph 7)
 \end{itemize}
 
+{\color{red} Amala will tackle this part.}
+
 \section*{Abstract}
 The abstract is long and technical but at the same time vague in presenting the key results to the reader. For example, the following sentences list raw modeling results without hinting at the mechanistic drivers of this response in the model. 
 "a steeper particle size spectrum increases the relative contribution of smaller slow-sinking particles." "Implementing a remineralization scheme generally decreases the total amount of biomass exported[...]", "Under specific conditions, remineralization processes counter-intuitively enhance the role of slower-sinking particles."
 
-\rep{The abstract has been modified to improve clarity of the study's result}
+{\color{blue}The abstract has been modified to improve clarity of the study's result}
 
 \section*{Section 2.2}
 The method section is detailed and relatively clear except for section 2.2.3. To clarify this section, the author should give some contextual information about the different metrics (N, B etc.) and why they are presented to the reader. 
@@ -209,6 +233,7 @@ The method section is detailed and relatively clear except for section 2.2.3. To
 	\item Explain why you examine the dependence between these different metrics, e.g. something like "we explore the sensitivity of X and Y to the particle size spectrum ..... We consider three distributions with slopes of Z, ZZ.." etc.
 \end{itemize}
 
+{\color{red} TBD}
 
 \section*{Minor comments:}
 \begin{itemize}	
