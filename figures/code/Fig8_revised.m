@@ -181,8 +181,8 @@ ylim([1e-2 100])
 title('Relative Downward Flux','FontSize',28,'position',[2 200 0])
 
 set(gcf,'color','w')
-export_fig -r300 Fig8_revised.png
-close
+%export_fig -r300 Fig8_revised.png
+%close
 %%
 
 % Calculate total biomass to normalize by
