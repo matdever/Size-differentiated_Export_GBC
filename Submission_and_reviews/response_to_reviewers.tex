@@ -57,13 +57,13 @@ We thank the reviewers for their constructive comments, which we have used to im
 \begin{itemize}
     \item Figures 7 and 8 are revised
     \item We have clarified the scientific reasoning behind some of the choices we made (e.g., particle seeding depth)
-    \item We clarify that the range of sinking speeds selected for the study are comparable to the vertical velocities of the flow. It is the relative speed (between particle sinking and advection) that is important, as opposed to the absolute value of the sinking speed. Particles that sink faster are less affected by the flow.
+    \item We clarify that the range of sinking speeds selected for the study are comparable to the vertical velocities of the flow. It is the relative speed (between particle sinking and advection) that is important, as opposed to the absolute value of the sinking speed. Particles that sink faster than the vertical velocities in the flow field are less affected by the flow.
     \item We argue that the export horizon can introduce bias and subjectivity \citep{Palevsky_2018, buesseler2020metrics} and thus keep our results in terms of fluxes.
 \end{itemize}
 
 %Their comments led to major changes in the manuscript, namely figure 7 and 8. It also led us to clarify some of the aspects of the manuscript, such as the scientific reasoning behind some of the choices made (e.g., particle seeding depth). Most of the concerns risen by the reviewer were, however, related to either the definition of an export horizon to quantify export, or the range of sinking speeds selected for the study. We argue below that (1) based on both our work and recent studies \citep{Palevsky_2018}, the definition of an export horizon is not adequate and introduces subjectivity and biases in the results, and (2) the relevant range of sinking rates is scaled to the dynamics of the region. The absolute values are not so much what is important, but rather the relative importance to vertical currents. In a more energetic region than the northeast Pacific, the range of particle sinking speeds would be wider and reach sinking rates of O(100 m/day), but would lead to similar results than the ones detailed in this study.\\
 
-The last two points were clarified in several parts of the revised manuscript. In addition, we respond to each of the reviewers' points (in blue).
+The last two points are clarified in several parts of the revised manuscript. In addition, we respond to each of the reviewers' points (in blue).
 
 \section{Comments from Reviewer  \#1}
 \subsection*{Major point \#1}
@@ -186,45 +186,47 @@ Please read the response to reviewer \#1 section for an even more in-depth justi
 \textit{By limiting their study to slow sinking particles, the authors target by design the particles that will be most sensitive to submesoscale dynamics (see Stukel et al) and exclude particles that sink with rates similar or faster than submesoscale motions and that can efficiently export at depth and participate to carbon sequestration.}
 
 {\color{blue}
-	As mentioned above, the range of sinking velocity is scaled to the environment, and is meant to encompass the range of velocities observed in that region. Sinking velocity far exceeding water vertical velocity can be simply computed using a 1D approximation. See above for more in-depth discussion\\}
+	As mentioned above, the range of particle sinking velocities chosen in this study is based on the vertical 
+	%is scaled to the environment, and is meant to encompass the range of
+	velocities of the flow in that region. The sinking flux of particles with Sinking velocity far exceeding water vertical velocity can be computed using a 1D sinking flux model (e.g. Omand et al., 2020). See above for a more in-depth discussion\\}
 
  \textit{Indeed, submesoscale is largely trapped in the upper ocean and only have a limited impact on export at greater depth (see previous discussions of these effects in Stukel et al, Erikson et al and Resplandy et al). The authors should acknowledge these limitations and discuss their implications.\\}
 
-{\color{blue} While submesoscale dynamics are strongest in the mixed layer, they have been proven to leak into the ocean interior, especially when coupled to a mesoscale circulation (see Ramachandran et al. 2014 in JGR and Ruiz et al. 2019 in JGR). Resplandy et al. 2019 explicitely mentions the fact that submesoscales dynamics are not resolved in the model used, and that the asymmetry associated with vertical velocityies at submesoscales  (i.e. the main mechanism leading to our conclusions) is not resolved (see Section 4.2 "Caveats and Limitations" in Resplandy et al.). A similar comment can be made for Erickson and Thompson 2018 (horizontal resolution is 2-4 km, so realistically not resolving processes at less than 10 km scales), and Stukel and Ducklow 2017 (stations are at most 10 km apart).
-We do not believe that the study is biased by design, as the fastest sinking particle class (5 m/day) virtually follows the 1D gravitational model that would also apply to all faster-sinkin particle classes, and are therefore insensitive to the presence of submesoscale dynamics (as demonstrated in the study).\\}
+{\color{blue} While submesoscale dynamics are strongest in the mixed layer, they have been proven to leak into the ocean interior, especially when coupled to a mesoscale circulation (see Ramachandran et al. 2014 in JGR and Ruiz et al. 2019 in JGR). Resplandy et al. 2019 explicitly state that submesoscale dynamics are not resolved in their model and that the asymmetry associated with vertical velocities at submesoscales  (an important mechanism leading to our conclusions) is not resolved by them (see Section 4.2 ``Caveats and Limitations" in Resplandy et al.). A similar comment can be made for Erickson and Thompson 2018 (horizontal resolution is 2-4 km, so realistically not resolving processes at scales less than 10 km), and Stukel and Ducklow 2017 (stations are at most 10 km apart).
+We do not believe that the study is biased by design, as the fastest sinking particle class (5 m/day) virtually follows the 1D gravitational model that would also apply to all faster-sinking particle classes, and is therefore insensitive to the presence of submesoscale dynamics (as demonstrated in the study).\\}
 
 \textit{The author could introduce the study by acknowledging up front that slow sinking particles are the particles most impacted by submesoscale (as shown in previous papers) and this is why they are the focus of this paper that explores the sensitivity to size spectrum etc.}
 
 {\color{blue}
-	This is a good point. We trust that the modifications made to the introduction now reflect this key aspect of the paper. The point is reiterated in Section 2.2.2 as well.}
+	This is a good point. We trust that the modifications made to the Introduction now reflect this key aspect of the paper. The point is reiterated in Section 2.2.2 as well.}
 
 
 \section*{Remineralization and slower sinking particle contribution.}
 \textit{The choice of some parameter appears arbitrary. I like the fact that the authors sweep the parameter space of the size spectrum ($\xi$ = 2, 3, 4). The choice of this parameter is however key in the conclusion that are drawn (contribution of slower-sinking particles , L557-558).}
 
 {\color{blue}
-	This parameter range is based on observational evidence cited in the text (L640), although not explicitly in section 2.2.3., where it would be most informative. We have modified the text in section 2.2.3 to better justify the range of $\xi$ used in this study. there is also a few sentences in Section 4.2 putting these values for the slope into perspective. \\} %, explaining that the exact value is a result of our approximations, but that the conclusion of the importance of constraining that slope remains valid, as the threshold is likely within the range of observed values for $\xi$.\\}
+	This parameter range is based on observational evidence cited in the text (L640), although not explicitly in section 2.2.3., where it would be most informative. We have modified the text in section 2.2.3 to better justify the range of $\xi$ used in this study. There are also a few sentences in Section 4.2 that provide perspective for these values of the Junge slope. \\} %, explaining that the exact value is a result of our approximations, but that the conclusion of the importance of constraining that slope remains valid, as the threshold is likely within the range of observed values for $\xi$.\\}
 
 \textit{Could you please present the case where the biomass spectrum slope is positive? Same as Figure 8 but with $\xi$ = 2 and contrast it with the case of $\xi$ = 4?\\}
 
 {\color{blue}
 Figure 8 has been modified to include both $\xi$ = 2 and $\xi$ = 4 cases in the presence of remineraliztion.\\}
 
-\textit{The authors briefly mention that slopes greater than 3 have been observed (L640). Could this discussion be augmented? What observational constraints do we have on the spectrum slope? Do we know if the biomass spectrum slope is positive or negative? Is it likely to change sign with season, biomes, looming conditions etc.? (not necessarily around station PAPA). Bridging your modeling results with available observations would greatly benefit the paper and facilitate the use of your conclusions by the community (please look into prior work to make these links). I strongly encourage you to discuss the implications of this result, what they mean for people measuring particles and export, what they should be looking for in the field?}
+\textit{The authors briefly mention that slopes greater than 3 have been observed (L640). Could this discussion be augmented? What observational constraints do we have on the spectrum slope? Do we know if the biomass spectrum slope is positive or negative? Is it likely to change sign with season, biomes, looming conditions etc.? (not necessarily around station PAPA). Bridging your modeling results with available observations would greatly benefit the paper and facilitate the use of your conclusions by the community (please look into prior work to make these links). I strongly encourage you to discuss the implications of this result, what they mean for people measuring particles and export, what they should be looking for in the field?}\\
 
 {\color{blue}
-	We have modified the text in the discussion section to discuss the implications of a steeper slope in a greater context. It now includes information about sources of observational evidence for steeper spectral slopes and the expected spatio-temporal variability.\\}
+	We have modified the Discussion section to address the implications of a steeper slope, the expected spatio-temporal variability and  observational evidence for steeper spectral slopes.\\}
 
-\textit{The effect of negative vs positive biomass spectrum slope is translated in your abstract by the rather vague "under specific conditions ..." (L27). Please try to clarify what this means in Layman terms in the abstract.}
+\textit{The effect of negative vs positive biomass spectrum slope is translated in your abstract by the rather vague ``under specific conditions ..." (L27). Please try to clarify what this means in layman terms in the abstract.}\\
 
 {\color{blue}Text has been modified to address this comment.\\}
 
-\textit{How do your results depend on the remineralization (0.13 d-1) length-scale? \\}
+\textit{How do your results depend on the remineralization (0.13 d$^{-1}$) length-scale? \\}
 
 {\color{blue} We can only offer a hypothesis to answer that question, as the impacts of remineralization are non-linear and even counter-intuitive in the dynamically active submesoscale flows, and accumulate through time at an exponential rate (see Equation 9 and 10). In the absence of submesoscale dynamics, a back-of-the-envelope calculation that assumes $w_{tot} = w_{s}$ tells us that a  1\% change in the remineralization rate leads to a 0.2\% per day change in the vertical flux. The corresponding sensitivity in the presence of submesoscale dynamics is impossible to confidently predict without a thorough investigation involving a significant number of additional simulations.\\}
 
 \section*{Literature Survey and Discussion}
-It is very concerning that the authors are missing key recent papers published on the subject, including observation-based papers that should be discussed with the author's modeling results. Please find below a list of relevant papers that should be included in introduction and/or discussion. This list is absolutely not exhaustive.
+It is very concerning that the authors are missing key recent papers published on the subject, including observation-based papers that should be discussed with the author's modeling results. Please find below a list of relevant papers that should be included in introduction and/or discussion. This list is absolutely not exhaustive.\\
 
 {\color{blue} Thank you for pointing out these studies, some of which are now cited in the manuscript. Some of those studies focus on, we believe, ocean dynamics at a different scale (and regime) and are not necessarily directly relevant. While useful for context, those were intentionally left out of the bibliography.\\}
 
@@ -239,42 +241,47 @@ It is very concerning that the authors are missing key recent papers published o
 	\item	Paragraphs 8 and 7 should be merged with paragraph 7. I suggest to present what the aim of the study is (some of paragraph 8) before mentioning the processes that your model does not resolve (e.g. surface wave in paragraph 7)
 \end{itemize}
 
-{\color{red} Amala will tackle this part.}
+{\color{blue} The Introduction has been modified taking these comments into consideration and several references have been added.}
 
 \section*{Abstract}
 The abstract is long and technical but at the same time vague in presenting the key results to the reader. For example, the following sentences list raw modeling results without hinting at the mechanistic drivers of this response in the model.
-"a steeper particle size spectrum increases the relative contribution of smaller slow-sinking particles." "Implementing a remineralization scheme generally decreases the total amount of biomass exported[...]", "Under specific conditions, remineralization processes counter-intuitively enhance the role of slower-sinking particles."
+"a steeper particle size spectrum increases the relative contribution of smaller slow-sinking particles." "Implementing a remineralization scheme generally decreases the total amount of biomass exported[...]", "Under specific conditions, remineralization processes counter-intuitively enhance the role of slower-sinking particles."\\
 
-{\color{blue}The abstract has been modified to improve clarity of the study's result.\\}
+{\color{blue}The abstract has been modified to more clearly highlight the study's result.\\}
 
 \section*{Section 2.2}
 The method section is detailed and relatively clear except for section 2.2.3. To clarify this section, the author should give some contextual information about the different metrics (N, B etc.) and why they are presented to the reader.
 \begin{itemize}
 	\item Link to observational constraints on the slope of the size spectrum (see comment \#2)?\\
-	{\color{blue} Range of typical values, along with the references, have been added to Section 2.2.3.\\}
+	{\color{blue} Range of typical values, along with the references, has been added to Section 2.2.3.\\}
 
-	\item Explain why you examine the dependence between these different metrics, e.g. something like "we explore the sensitivity of X and Y to the particle size spectrum ..... We consider three distributions with slopes of Z, ZZ.." etc.
-		{\color{blue} An introductory sentence was added in ection 2.2.3 to clarify the link between the method and the study's objective.\\}
+	\item Explain why you examine the dependence between these different metrics, e.g. something like ``we explore the sensitivity of X and Y to the particle size spectrum ..... We consider three distributions with slopes of Z, ZZ.." etc.
+	
+		{\color{blue} An introductory sentence was added in Section 2.2.3 to clarify the link between the method and the study's objective.\\}
 \end{itemize}
 
 \section*{Minor comments:}
 \begin{itemize}
-	\item Can you specify if and how equation 9 differs from the traditional Martin curve?
-	{\color{blue} A good reference for this would be Cael and Bisson (2018) in \textit{frontiers in Marine Science}. The model used here is an exponential model, as opposed to the "Martin Curve" that relies on a power-law model. The Martin curve implicitely includes a decrease of the remineralization rate with time that is not considered in the exponential model.\\}
+	\item Can you specify if and how equation 9 differs from the traditional Martin curve?\\
+	{\color{blue} A good reference for this would be Cael and Bisson (2018) in \textit{Frontiers in Marine Science}. The flux profile here is exponential, as opposed to a power-law that is used to explain the ``Martin Curve".}
+	
+	%The Martin curve implicitely includes a decrease of the remineralization rate with time that is not considered in the exponential model.\\}
 
-	\item L40: the last sentence of the first paragraph is vague and unnecessary. I would delete it.
-	{\color{blue} text was modified\\}
+	\item L40: the last sentence of the first paragraph is vague and unnecessary. I would delete it.\\
+	{\color{blue} The text was modified\\}
 	\item L 162: Problem with reference Laboratory, 2018?
 	{\color{blue} Reference was fixed\\}
-	\item Figures 7 and 8. Please label the size classes on the insert or at least mention the colors-size relationship in the caption.
-	{\color{blue} To avoid overcrowing the figures, the color coding is included in the caption for figures 6-8.\\}
+	\item Figures 7 and 8. Please label the size classes on the insert or at least mention the colors-size relationship in the caption.\\
+	{\color{blue} To avoid overcrowding the figures, the color coding is included in the caption for figures 6-8.\\}
 
 
 	\item The model data used in this study should be made available as requested by AGU standards.
-	{\color{blue} The size of the data files exceed a few Terabytes due to the high-resolution simulation,  the very large number of particles tracked, and the number of experiments conducted. We were not able to identify a platform that would host such a large volume of data in a sustained way, and guaranteeing public access, and not for a lack of trying. We would happily consider any suggestions on that issue, as this is a re-occuring challenge in high-resolution modelling.\\}
+	{\color{blue} The size of the data files exceed a few Terabytes due to the high-resolution simulation,  the very large number of particles tracked, and the number of experiments conducted. We were not able to identify a platform that would host such a large volume of data in a sustained way, while guaranteeing public access. We have therefore provided a link to the model code on Github.\\}
+	%We would happily consider any suggestions on this issue, as it is a re-occurring challenge in high-resolution modelling.\\}
 \end{itemize}
 
-References.
+{\bf References}\\
+
 Baker, C.A., Henson, S.A., Cavan, E.L., Giering, S.L.C., Yool, A., Gehlen, M., Belcher, A., Riley, J.S., Smith, H.E.K., Sanders, R., 2017. Slow-sinking particulate organic carbon in the Atlantic Ocean: Magnitude, flux, and potential controls. Global Biogeochemical Cycles 31, 1051-1065. https://doi.org/10.1002/2017GB005638\\
 
 Boyd, P.W., Claustre, H., Levy, M., Siegel, D.A., Weber, T., 2019. Multi-faceted particle pumps drive carbon sequestration in the ocean. Nature 568, 327-335. https://doi.org/10.1038/s41586-019-1098-2\\
