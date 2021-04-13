@@ -48,7 +48,8 @@ color0025 = [215,48,39]/256;
 color1 = [39,100,25]/256;
 color5 = [49,54,149]/256;
 
-figure(2)
+figure('position',[1200 500 1200 480])
+subplot(1,2,2)
 thew = [0.025 1 5];
 h1 = loglog(thew,[B0025_3 B1_3 B5_3]./sum([B0025_3 B1_3 B5_3])*100,'-k','linewidth',2);
 hold on
@@ -138,7 +139,7 @@ for spectral_slope = [2 3 4]
     theyaxis./sum(theyaxis)*100
     %
     
-    figure(1)
+    subplot(1,2,1)
     % theoretical curve
     if spectral_slope>3
         style = '--';
@@ -205,4 +206,4 @@ end
 set(gca,'xtick',Xtick,'xticklabel',xticklab)
 xlabel('Equivalent Stokes radius [\mum]')
 set(gcf,'color','w')
-%export_fig -r300 Fig4b.png
+export_fig -r300 Fig4.png
